@@ -38,7 +38,7 @@ setInterval(() => {
 });
 
 // ========== SLIDER ==========
-let ProjectsSwiper = new Swiper(".slider-container", {
+let ProjectsSwiper = new Swiper(".gallery-swiper", {
     loop: true,
     grabCursor: true,
     spaceBetween: 24,
