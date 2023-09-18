@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.svg">
+    <script src="JS/swiper-bundle.min.js"></script>
+    <script async src="JS/script.js"></script>
+    <title>Bakonyi Bitfaragó Verseny 2023</title>
+</head>
+<body>
+    <!--======== NAVIGATION ========-->
+    <nav class="navigation">
+        <ul>
+            <li data-nav-link="team">
+                <div>
+                    <span class="icon">
+                        <i class="ri-team-line"></i>
+                    </span>
+                    <span class="text">
+                        Csapat
+                    </span>
+                </div>
+            </li>
+            <li data-nav-link="home" class="active">
+                <div>
+                    <span class="icon">
+                        <i class="ri-home-4-line"></i>
+                    </span>
+                    <span class="text">
+                        Főoldal
+                    </span>
+                </div>
+            </li>
+            <li data-nav-link="film">
+                <div>
+                    <span class="icon">
+                        <i class="ri-film-line"></i>
+                    </span>
+                    <span class="text">
+                        Filmajánló
+                    </span>
+                </div>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </nav>
+    <!--======== MAIN ========-->
+    <main class="main">
+        <!--======== HOME ========-->
+        <section class="home active" data-page="home">
+            <p>Bakonyi Bitfaragó Verseny 2023</p>
+        </section>
+        <section class="team" data-page="team">
+            <!--======== CLOCK ========-->
+            <div class="clock-container">
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+                </div>
+            </div>
+            <!--======== TEAM ========-->
+            <h2 class="section-title">Csapatunk</h2>
+            <article class="team-container">
+                <article class="team-card">
+                    <a href="#" class="modal-button">
+                        <img src="Images/profile.png" alt="Profil kép" class="team-img">
+                    </a>
+                    <h3 class="team-title">Veres Zsolt</h3>
+                    <span class="team-subtitle"><i class="ri-braces-line"></i> Web Fejlesztés</span>
+                </article>
+                <article class="team-card">
+                    <a href="#" class="modal-button">
+                        <img src="Images/profile.png" alt="Profil kép" class="team-img">
+                    </a>
+                    <h3 class="team-title">Bokor Balázs</h3>
+                    <span class="team-subtitle"><i class="ri-drop-line"></i> Web Dizájn</span>
+                </article>
+                <article class="team-card">
+                    <a href="#" class="modal-button">
+                        <img src="Images/profile.png" alt="Profil kép" class="team-img">
+                    </a>
+                    <h3 class="team-title">Ónadi Péter</h3>
+                    <span class="team-subtitle"><i class="ri-braces-line"></i> Web Fejlesztés</span>
+                </article>
+            </article>
+            <!--======== LANGUAGES ========-->
+            <h2 class="section-title">Használt nyelvek <i class="ri-braces-line"></i></h2>
+            <article class="lang-container">
+                <div class="lang-content">
+                    <div class="lang-info">
+                        <div class="lang-data">
+                            <div class="lang-blob">
+                                <img src="Images/html-1.svg" alt="HTML SVG">
+                            </div>
+                            <h3 class="lang-name">HTML</h3>
+                            <span class="lang-subtitle">Közép szint</span>
+                        </div>
+                        <div class="lang-data">
+                            <div class="lang-blob">
+                                <img src="Images/css-3.svg" alt="CSS SVG">
+                            </div>
+                            <h3 class="lang-name">CSS</h3>
+                            <span class="lang-subtitle">Emelt szint</span>
+                        </div>
+                        <div class="lang-data">
+                            <div class="lang-blob">
+                                <img src="Images/logo-javascript.svg" alt="JAVASCRIPT SVG">
+                            </div>
+                            <h3 class="lang-name">JavaScript</h3>
+                            <span class="lang-subtitle">Közép szint</span>
+                        </div>
+                        <div class="lang-data">
+                            <div class="lang-blob">
+                                <img src="Images/git-icon.svg" alt="GIT SVG">
+                            </div>
+                            <h3 class="lang-name">Git</h3>
+                            <span class="lang-subtitle">Alap szint</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--======== IMAGE SLIDER ========-->
+            <h2 class="section-title">Képnézegető</h2>
+            <article class="slider-container swiper">
+                <div class="swiper-wrapper">
+                    <div class="slider-content swiper-slide">
+                        <img src="Images/project1.jpg" alt="Képnézegető képe" class="slider-img">
+                        <div>
+                            <span class="slider-subtitle">Lorem, ipsum.</span>
+                            <h1 class="slider-title">Lorem ipsum dolor sit.</h1>
+                        </div>
+                    </div>
+                    <div class="slider-content swiper-slide">
+                        <img src="Images/project2.jpg" alt="Képnézegető képe" class="slider-img">
+                        <div>
+                            <span class="slider-subtitle">Lorem, ipsum.</span>
+                            <h1 class="slider-title">Lorem ipsum dolor sit.</h1>
+                        </div>
+                    </div>
+                    <div class="slider-content swiper-slide">
+                        <img src="Images/project3.jpg" alt="Képnézegető képe" class="slider-img">
+                        <div>
+                            <span class="slider-subtitle">Lorem, ipsum.</span>
+                            <h1 class="slider-title">Lorem ipsum dolor sit.</h1>
+                        </div>
+                    </div>
+                    <div class="slider-content swiper-slide">
+                        <img src="Images/project4.jpg" alt="Képnézegető képe" class="slider-img">
+                        <div>
+                            <span class="slider-subtitle">Lorem, ipsum.</span>
+                            <h1 class="slider-title">Lorem ipsum dolor sit.</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </article>
+            <!--======== MODAL ========-->
+            <article class="modal">
+                <div class="modal-content">
+                    <h4 class="modal-title">Cím</h4>
+                    <hr class="modal-hr">
+                    <i class="ri-close-line modal-close"></i>
+                    <p class="modal-description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Rem aspernatur unde nemo labore voluptate sint possimus minima.
+                        Repellendus ullam, quae placeat, dignissimos iure ea accusamus, earum consequatur suscipit accusantium consectetur.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <!--======== FILM ========-->
+        <section class="film" data-page="film">
+            <h2 class="section-title">Filmajánló</h2>
+            <section class="film-container">
+                
+            </section>
+        </section>
+    </main>
+</body>
+</html>
