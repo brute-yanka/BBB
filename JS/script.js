@@ -75,3 +75,24 @@ modalCloses.forEach((modalClose) => {
         });
     });
 });
+
+// ========== MOVIE CATEGORY ==========
+const tristateBtn = document.querySelectorAll(".film-filter-btn");
+
+tristateBtn.forEach((item) => {
+    item.addEventListener("click", () => {
+        switch (item.value.charAt(0)) {
+        case '\u268A':
+            item.value = '\u2705';
+            break;
+        case '\u2705':
+            item.value = '\u274C';
+            break;
+        case '\u274C':
+            item.value = '\u268A';
+            break;
+        default:
+            alert(item.value);
+    }
+    }) 
+});
