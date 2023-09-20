@@ -1,364 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="icon" type="image/x-icon" href="Images/Others/favicon.svg">
-    <script src="JS/swiper-bundle.min.js"></script>
-    <script src="JS/films.js"></script>
-    <script defer src="JS/script.js"></script>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css' rel='stylesheet'>
+    <link rel='stylesheet' href='CSS/swiper-bundle.min.css'>
+    <link rel='stylesheet' href='CSS/style.css'>
+    <link rel='icon' type='image/x-icon' href='Images/Others/favicon.svg'>
+    <script src='JS/swiper-bundle.min.js'></script>
+    <script src='JS/team.js'></script>
+    <script src="JS/lang.js"></script>
+    <script src='JS/films.js'></script>
+    <script defer src='JS/script.js'></script>
     <title>Bakonyi Bitfaragó Verseny 2023</title>
 </head>
 <body>
     <!--======== NAVIGATION ========-->
-    <nav class="navigation">
+    <nav class='navigation'>
         <ul>
-            <li data-nav-link="team">
+            <li data-nav-link='team'>
                 <div>
-                    <span class="icon">
-                        <i class="ri-team-line"></i>
+                    <span class='icon'>
+                        <i class='ri-team-line'></i>
                     </span>
-                    <span class="text">
+                    <span class='text'>
                         Csapat
                     </span>
                 </div>
             </li>
-            <li data-nav-link="home" class="active">
+            <li data-nav-link='home' class='active'>
                 <div>
-                    <span class="icon">
-                        <i class="ri-home-4-line"></i>
+                    <span class='icon'>
+                        <i class='ri-home-4-line'></i>
                     </span>
-                    <span class="text">
+                    <span class='text'>
                         Főoldal
                     </span>
                 </div>
             </li>
-            <li data-nav-link="film">
+            <li data-nav-link='film'>
                 <div>
-                    <span class="icon">
-                        <i class="ri-film-line"></i>
+                    <span class='icon'>
+                        <i class='ri-film-line'></i>
                     </span>
-                    <span class="text">
+                    <span class='text'>
                         Filmajánló
                     </span>
                 </div>
             </li>
-            <div class="indicator"></div>
+            <div class='indicator'></div>
         </ul>
     </nav>
     <!--======== MAIN ========-->
-    <main class="main">
+    <main class='main'>
         <!--======== HOME ========-->
-        <section class="home active" data-page="home">
+        <section class='home active' data-page='home'>
             <p>Bakonyi Bitfaragó Verseny 2023</p>
         </section>
-        <section class="team" data-page="team">
+        <section class='team' data-page='team'>
             <!--======== CLOCK ========-->
-            <div class="clock-container">
-                <div class="clock">
-                    <div class="hour">
-                        <div class="hr" id="hr"></div>
+            <div class='clock-container'>
+                <div class='clock'>
+                    <div class='hour'>
+                        <div class='hr' id='hr'></div>
                     </div>
-                    <div class="min">
-                        <div class="mn" id="mn"></div>
+                    <div class='min'>
+                        <div class='mn' id='mn'></div>
                     </div>
-                    <div class="sec">
-                        <div class="sc" id="sc"></div>
+                    <div class='sec'>
+                        <div class='sc' id='sc'></div>
                     </div>
                 </div>
             </div>
             <!--======== TEAM ========-->
-            <h2 class="section-title">Csapatunk <i class="ri-team-line"></i></h2>
-            <article class="team-container container">
-                <article class="team-card">
-                    <a href="#" class="modal-button">
-                        <img src="Images/Team/profile.png" alt="Profil kép" class="team-img">
-                    </a>
-                    <h3 class="team-title">Veres Zsolt</h3>
-                    <span class="team-subtitle"><i class="ri-braces-line"></i> Web Fejlesztés</span>
-                </article>
-                <article class="team-card">
-                    <a href="#" class="modal-button">
-                        <img src="Images/Team/profile.png" alt="Profil kép" class="team-img">
-                    </a>
-                    <h3 class="team-title">Bokor Balázs</h3>
-                    <span class="team-subtitle"><i class="ri-drop-line"></i> Web Dizájn</span>
-                </article>
-                <article class="team-card">
-                    <a href="#" class="modal-button">
-                        <img src="Images/Team/profile.png" alt="Profil kép" class="team-img">
-                    </a>
-                    <h3 class="team-title">Ónadi Péter</h3>
-                    <span class="team-subtitle"><i class="ri-braces-line"></i> Web Fejlesztés</span>
-                </article>
-            </article>
+            <h2 class='section-title'>Csapatunk <i class='ri-team-line'></i></h2>
+            <article class='team-container container'></article>
             <!--======== LANGUAGES ========-->
-            <h2 class="section-title">Használt nyelvek <i class="ri-braces-line"></i></h2>
-            <article class="lang-container container">
-                <div class="lang-content">
-                    <div class="lang-info">
-                        <div class="lang-data">
-                            <div class="lang-blob">
-                                <img src="Images/Languages/html-1.svg" alt="HTML SVG">
-                            </div>
-                            <h3 class="lang-name">HTML</h3>
-                            <span class="lang-subtitle">Közép szint</span>
-                        </div>
-                        <div class="lang-data">
-                            <div class="lang-blob">
-                                <img src="Images/Languages/css-3.svg" alt="CSS SVG">
-                            </div>
-                            <h3 class="lang-name">CSS</h3>
-                            <span class="lang-subtitle">Emelt szint</span>
-                        </div>
-                        <div class="lang-data">
-                            <div class="lang-blob">
-                                <img src="Images/Languages/logo-javascript.svg" alt="JAVASCRIPT SVG">
-                            </div>
-                            <h3 class="lang-name">JavaScript</h3>
-                            <span class="lang-subtitle">Közép szint</span>
-                        </div>
-                        <div class="lang-data">
-                            <div class="lang-blob">
-                                <img src="Images/Languages/git-icon.svg" alt="GIT SVG">
-                            </div>
-                            <h3 class="lang-name">Git</h3>
-                            <span class="lang-subtitle">Alap szint</span>
-                        </div>
-                    </div>
+            <h2 class='section-title'>Használt nyelvek <i class='ri-braces-line'></i></h2>
+            <article class='lang-container container'>
+                <div class='lang-content'>
+                    <div class='lang-info'></div>
                 </div>
             </article>
             <!--======== IMAGE SLIDER ========-->
-            <h2 class="section-title">Képnézegető <i class="ri-image-line"></i></h2>
-            <article class="gallery-container container">
-                <div class="gallery-swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="gallery-content swiper-slide">
-                            <img src="Images/Slider/project1.jpg" alt="Galéria kép" class="gallery-img">
+            <h2 class='section-title'>Képnézegető <i class='ri-image-line'></i></h2>
+            <article class='gallery-container container'>
+                <div class='gallery-swiper swiper'>
+                    <div class='swiper-wrapper'>
+                        <div class='gallery-content swiper-slide'>
+                            <img src='Images/Slider/project1.jpg' alt='Galéria kép' class='gallery-img'>
                             <div>
-                                <h1 class="gallery-title">Lorem, ipsum.</h1>
-                                <span class="gallery-subtitle">Lorem ipsum dolor sit amet.</span>
+                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
+                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
                             </div>
                         </div>
-                        <div class="gallery-content swiper-slide">
-                            <img src="Images/Slider/project2.jpg" alt="Galéria kép" class="gallery-img">
+                        <div class='gallery-content swiper-slide'>
+                            <img src='Images/Slider/project2.jpg' alt='Galéria kép' class='gallery-img'>
                             <div>
-                                <h1 class="gallery-title">Lorem, ipsum.</h1>
-                                <span class="gallery-subtitle">Lorem ipsum dolor sit amet.</span>
+                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
+                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
                             </div>
                         </div>
-                        <div class="gallery-content swiper-slide">
-                            <img src="Images/Slider/project3.jpg" alt="Galéria kép" class="gallery-img">
+                        <div class='gallery-content swiper-slide'>
+                            <img src='Images/Slider/project3.jpg' alt='Galéria kép' class='gallery-img'>
                             <div>
-                                <h1 class="gallery-title">Lorem, ipsum.</h1>
-                                <span class="gallery-subtitle">Lorem ipsum dolor sit amet.</span>
+                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
+                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
                             </div>
                         </div>
-                        <div class="gallery-content swiper-slide">
-                            <img src="Images/Slider/project4.jpg" alt="Galéria kép" class="gallery-img">
+                        <div class='gallery-content swiper-slide'>
+                            <img src='Images/Slider/project4.jpg' alt='Galéria kép' class='gallery-img'>
                             <div>
-                                <h1 class="gallery-title">Lorem, ipsum.</h1>
-                                <span class="gallery-subtitle">Lorem ipsum dolor sit amet.</span>
+                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
+                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next">
-                        <i class="ri-arrow-right-s-line"></i>
+                    <div class='swiper-button-next'>
+                        <i class='ri-arrow-right-s-line'></i>
                     </div>
-                    <div class="swiper-button-prev">
-                        <i class="ri-arrow-left-s-line"></i>
+                    <div class='swiper-button-prev'>
+                        <i class='ri-arrow-left-s-line'></i>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class='swiper-pagination'></div>
                 </div>
             </article>
             <!--======== MODAL ========-->
-            <article class="modal">
-                <div class="modal-content">
-                    <h4 class="modal-title">Cím</h4>
-                    <hr class="modal-hr">
-                    <i class="ri-close-line modal-close"></i>
-                    <p class="modal-description">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Rem aspernatur unde nemo labore voluptate sint possimus minima.
-                        Repellendus ullam, quae placeat, dignissimos iure ea accusamus, earum consequatur suscipit accusantium consectetur.
-                    </p>
+            <article class='modal'>
+                <div class='modal-content'>
+                    <h4 class='modal-title'></h4>
+                    <hr class='modal-hr'>
+                    <i class='ri-close-line modal-close'></i>
+                    <p class='modal-description'></p>
                 </div>
             </article>
         </section>
+        <!-- KERESÉS ADOTT FILMRE -->
+        <!-- TÖBB/KEVESEBB MEGJELENITO GOMB -->
         <!--======== FILM ========-->
-        <section class="film" data-page="film">
-            <h2 class="section-title">Filmajánló</h2>
-            <article class="film-container container">
-                <article class="film-upcoming">
-                    <hr class="film-hr">
-                    <div class="film-wrapper">
-                        <h2 class="article-title">Legjobbra értékelt filmek</h2>
+        <section class='film' data-page='film'>
+            <h2 class='section-title'>Filmajánló</h2>
+            <article class='film-container container'>
+                <div class='film-top-rated'>
+                    <hr class='film-hr'>
+                    <div class='film-wrapper'>
+                        <h2 class='article-title'>Legjobbra értékelt filmek</h2>
                     </div>
-                    <ul class="film-list">
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-1.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">Morbius</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">HD</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">104 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>5.9</data>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-2.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">The Adam Project</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">4K</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">106 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>7.0</data>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-3.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">Sonic the Hedgehog 2</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">2K</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">122 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>7.8</data>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </article>
-                <article class="film-search">
-                    <hr class="film-hr">
-                    <div class="film-wrapper">
-                        <h2 class="article-title">Filmkereső</h2>
-                        <ul class="film-filter-list">
+                    <ul class='film-list' id="film-top-rated-list"></ul>
+                </div>
+                <div class='film-search'>
+                    <hr class='film-hr'>
+                    <div class='film-wrapper'>
+                        <h2 class='article-title'>Filmkereső</h2>
+                        <input type='search' placeholder='Filmcím keresés...' class='film-search-input' id='search-input'>
+                        <ul class='film-filter-list'>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="action" class="film-filter-btn" value="&#9866;" />
-                                <label for="action">Akció</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='action' class='film-filter-btn' value='&#9866;' />
+                                <label for='action'>Akció</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="adventure" class="film-filter-btn" value="&#9866;" />
-                                <label for="adventure">Kaland</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='adventure' class='film-filter-btn' value='&#9866;' />
+                                <label for='adventure'>Kaland</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="scifi" class="film-filter-btn" value="&#9866;" />
-                                <label for="scifi">Sci-Fi</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='scifi' class='film-filter-btn' value='&#9866;' />
+                                <label for='scifi'>Sci-Fi</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="comedy" class="film-filter-btn" value="&#9866;" />
-                                <label for="comedy">Vígjáték</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='comedy' class='film-filter-btn' value='&#9866;' />
+                                <label for='comedy'>Vígjáték</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="horror" class="film-filter-btn" value="&#9866;" />
-                                <label for="horror">Horror</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='horror' class='film-filter-btn' value='&#9866;' />
+                                <label for='horror'>Horror</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="drama" class="film-filter-btn" value="&#9866;" />
-                                <label for="drama">Dráma</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='drama' class='film-filter-btn' value='&#9866;' />
+                                <label for='drama'>Dráma</label>
                             </li>
                             <li>
-                                <input title="Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;" type="button" id="war" class="film-filter-btn" value="&#9866;" />
-                                <label for="war">Háborús</label>
+                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='war' class='film-filter-btn' value='&#9866;' />
+                                <label for='war'>Háborús</label>
                             </li>
                         </ul>
-                        <button class="film-search-btn">Keresés</button>
+                        <button class='film-search-btn'>Keresés</button>
                     </div>
-                    <ul class="film-list">
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-1.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">Morbius</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">HD</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">104 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>5.9</data>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-2.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">Morbius</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">HD</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">104 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>5.9</data>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="film-card">
-                            <figure class="film-card-banner">
-                                <img src="Images/Movie/movie-3.png" alt="Morbius movie poster">
-                            </figure>
-                            <div class="film-title-wrapper">
-                                <h3 class="film-title">Morbius</h3>
-                                <time datetime="2022">2022</time>
-                            </div>
-                            <div class="film-card-data">
-                                <div class="film-badge badge-outline">HD</div>
-                                <div class="film-duration">
-                                    <i class="ri-time-line"></i>
-                                    <time datetime="PT122M">104 min</time>
-                                </div>
-                                <div class="film-rating">
-                                    <i class="ri-bard-line"></i>
-                                    <data>5.9</data>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class='film-list' id='film-list'>
                     </ul>
-                </article>
+                </div>
             </article>
         </section>
     </main>
