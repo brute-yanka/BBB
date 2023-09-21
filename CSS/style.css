@@ -702,9 +702,12 @@ section.active{
 }
 
 .film-card-banner{
+    display: flex;
+    align-self: center;
     position: relative;
-    background: var(--eerie-black-2);
-    aspect-ratio: 2 / 3;
+    background: transparent;
+    width: 240px;
+    height: 365px;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -712,9 +715,9 @@ section.active{
 }
 
 .film-card-banner img{
-    width: 250px;
-    height: auto;
-    object-fit: cover;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
     overflow: hidden;
 }
 
@@ -747,6 +750,7 @@ section.active{
 
 .film-badge{
     color: var(--light-gray-70);
+    font-size: var(--fs-1);
     border-color: #fff;
 }
 

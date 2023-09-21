@@ -123,7 +123,7 @@ const topRated = films.slice(0, 3);
 for (let i = 0; i < topRated.length;i++) {
     const card = createElementWithAttributes('li', { className: 'film-card' });
     const figure = createElementWithAttributes('figure', { className: 'film-card-banner' });
-    const img = createElementWithAttributes('img', { src: `Images/Movie/${topRated[i].picture}`, alt: `${topRated[i].alt}` });
+    const img = createElementWithAttributes('img', { src: `Images/Movie/${topRated[i].picture}`, alt: `${topRated[i].title} képe` });
     const wrapper = createElementWithAttributes('div', { className: 'film-title-wrapper' });
     const h3 = createElementWithAttributes('h3', { className: 'film-title' }, topRated[i].title);
     const date = createElementWithAttributes('time', { dateTime: `${topRated[i].year}` }, topRated[i].year);
@@ -131,7 +131,7 @@ for (let i = 0; i < topRated.length;i++) {
     const badge = createElementWithAttributes('div', { className: 'film-badge badge-outline' }, topRated[i].badge);
     const duration = createElementWithAttributes('div', { className: 'film-duration' });
     const icon = createElementWithAttributes('i', { className: 'ri-time-line' });
-    const time = createElementWithAttributes('time', { dateTime: `PT${topRated[i].duration}M` }, `${topRated[i].duration} perc`);
+    const time = createElementWithAttributes('time', { dateTime: `PT${topRated[i].duration}M` }, topRated[i].duration);
     const rating = createElementWithAttributes('div', { className: 'film-rating' }, topRated[i].rating);
     const icon2 = createElementWithAttributes('i', { className: 'ri-bard-line' });
     const rate = createElementWithAttributes('data', {}, topRated[i].data);
@@ -169,27 +169,27 @@ tristateBtn.forEach((item) => {
 const filmContainer = document.getElementById('film-list');
 const searchBtn = document.querySelector('button.film-search-btn');
 
-// for (let i = 0; i < films.length;i++) {
-//     const card = createElementWithAttributes('li', { className: 'film-card' });
-//     const figure = createElementWithAttributes('figure', { className: 'film-card-banner' });
-//     const img = createElementWithAttributes('img', { src: `Images/Movie/${films[i].picture}`, alt: `${films[i].alt}` });
-//     const wrapper = createElementWithAttributes('div', { className: 'film-title-wrapper' });
-//     const h3 = createElementWithAttributes('h3', { className: 'film-title' }, films[i].title);
-//     const date = createElementWithAttributes('time', { dateTime: `${films[i].year}` }, films[i].year);
-//     const data = createElementWithAttributes('div', { className: 'film-card-data' });
-//     const badge = createElementWithAttributes('div', { className: 'film-badge badge-outline' }, films[i].badge);
-//     const duration = createElementWithAttributes('div', { className: 'film-duration' });
-//     const icon = createElementWithAttributes('i', { className: 'ri-time-line' });
-//     const time = createElementWithAttributes('time', { dateTime: `PT${films[i].duration}M` }, `${films[i].duration} perc`);
-//     const rating = createElementWithAttributes('div', { className: 'film-rating' }, films[i].rating);
-//     const icon2 = createElementWithAttributes('i', { className: 'ri-bard-line' });
-//     const rate = createElementWithAttributes('data', {}, films[i].data);
-//     //----
-//     filmContainer.append(card);
-//     card.append(figure, wrapper, data);
-//     figure.append(img);
-//     wrapper.append(h3, date);
-//     data.append(badge, duration, rating);
-//     duration.append(icon, time);
-//     rating.append(icon2, rate);
-// };
+for (let i = 0; i < films.length; i++) {
+    const card = createElementWithAttributes('li', { className: 'film-card' });
+    const figure = createElementWithAttributes('figure', { className: 'film-card-banner' });
+    const img = createElementWithAttributes('img', { src: `Images/Movie/${films[i].picture}`, alt: `${films[i].alt}` });
+    const wrapper = createElementWithAttributes('div', { className: 'film-title-wrapper' });
+    const h3 = createElementWithAttributes('h3', { className: 'film-title' }, films[i].title);
+    const date = createElementWithAttributes('time', { dateTime: `${films[i].year}` }, films[i].year);
+    const data = createElementWithAttributes('div', { className: 'film-card-data' });
+    const badge = createElementWithAttributes('div', { className: 'film-badge badge-outline' }, films[i].badge);
+    const duration = createElementWithAttributes('div', { className: 'film-duration' });
+    const icon = createElementWithAttributes('i', { className: 'ri-time-line' });
+    const time = createElementWithAttributes('time', { dateTime: `PT${films[i].duration}M` }, films[i].duration);
+    const rating = createElementWithAttributes('div', { className: 'film-rating' }, films[i].rating);
+    const icon2 = createElementWithAttributes('i', { className: 'ri-bard-line' });
+    const rate = createElementWithAttributes('data', {}, films[i].data);
+    //----
+    filmContainer.append(card);
+    card.append(figure, wrapper, data);
+    figure.append(img);
+    wrapper.append(h3, date);
+    data.append(badge, duration, rating);
+    duration.append(icon, time);
+    rating.append(icon2, rate);
+};
