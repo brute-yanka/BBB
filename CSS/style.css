@@ -282,9 +282,9 @@ section.active{
 /* ========== TEAM ========== */
 .team-container{
     display: grid;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: repeat(1, 1fr);
-    gap: 2.5rem 3rem;
+    gap: 1.5rem 3rem;
 }
 
 .team-card{
@@ -296,6 +296,7 @@ section.active{
 
 .team-img{
     position: relative;
+    align-self: center;
     width: 120px;
     border-radius: 1rem;
     margin-bottom: 0.75rem;
@@ -431,8 +432,8 @@ section.active{
 
 .lang-info{
     justify-content: center;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
 }
 
 .lang-data{
@@ -631,7 +632,6 @@ section.active{
 .film-filter-list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: baseline;
     gap: 1.25rem;
     margin-bottom: 2.5rem;
 }
@@ -642,6 +642,7 @@ section.active{
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
+    padding-bottom: 0.25rem;
     background: var(--jet);
     cursor: pointer;
 }
@@ -659,6 +660,7 @@ section.active{
     font-weight: var(--fw-300);
     font-size: var(--fs-4);
     width: 40%;
+    min-width: 250px;
     height: 2.5rem;
     margin-bottom: 2rem;
     border: 2px solid var(--eerie-black-2);
@@ -690,10 +692,9 @@ section.active{
 }
 
 .film-card{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    max-width: 240px;
     transition: ease 0.5s;
 }
 
@@ -703,22 +704,15 @@ section.active{
 
 .film-card-banner{
     display: flex;
-    align-self: center;
     position: relative;
-    background: transparent;
+    align-self: center;
+    justify-content: center;
     width: 240px;
     height: 365px;
-    border-radius: 6px;
+    border-radius: 1.25rem;
     overflow: hidden;
     margin-bottom: 20px;
     transition: 0.15s ease;
-}
-
-.film-card-banner img{
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-    overflow: hidden;
 }
 
 .film-title-wrapper{
@@ -799,7 +793,7 @@ section.active{
         left: calc(50% - 130px);
     }
     .team-container{
-        grid-template-columns: repeat(auto-fit, 160px);
+        grid-template-columns: repeat(2, 1fr);
     }
     .lang-container{
         justify-content: center;
@@ -850,8 +844,11 @@ section.active{
 @media screen and (min-width: 1024px){
     .clock-container{
         position: absolute;
-        top: 2rem;
-        right: 2rem;
+        top: 1rem;
+        right: 1rem;
+    }
+    .team-container{
+        grid-template-columns: repeat(auto-fit, 160px);
     }
     .lang-container{
         column-gap: 10rem;
