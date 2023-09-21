@@ -10,6 +10,7 @@
     <script src='JS/swiper-bundle.min.js'></script>
     <script src='JS/team.js'></script>
     <script src="JS/lang.js"></script>
+    <script src="JS/categories.js"></script>
     <script src='JS/films.js'></script>
     <script defer src='JS/script.js'></script>
     <title>Bakonyi Bitfaragó Verseny 2023</title>
@@ -152,65 +153,8 @@
                     <hr class='film-hr'>
                     <div class='film-wrapper'>
                         <h2 class='article-title'>Filmkereső</h2>
-                        <input type='search' placeholder='Filmcím keresés...' class='film-search-input' id='search-input'>
-                        <ul class='film-filter-list'>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='action' class='film-filter-btn' value='&#9866;' />
-                                <label for='action'>Akció</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='crime' class='film-filter-btn' value='&#9866;' />
-                                <label for='crime'>Bűnügyi</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='thriller' class='film-filter-btn' value='&#9866;' />
-                                <label for='thriller'>Krimi</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='adventure' class='film-filter-btn' value='&#9866;' />
-                                <label for='adventure'>Kaland</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='scifi' class='film-filter-btn' value='&#9866;' />
-                                <label for='scifi'>Sci-Fi</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='comedy' class='film-filter-btn' value='&#9866;' />
-                                <label for='comedy'>Vígjáték</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='horror' class='film-filter-btn' value='&#9866;' />
-                                <label for='horror'>Horror</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='drama' class='film-filter-btn' value='&#9866;' />
-                                <label for='drama'>Dráma</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='romance' class='film-filter-btn' value='&#9866;' />
-                                <label for='romance'>Romantikus</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='fantasy' class='film-filter-btn' value='&#9866;' />
-                                <label for='fantasy'>Fantasy</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='animation' class='film-filter-btn' value='&#9866;' />
-                                <label for='animation'>Animáció</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='biography' class='film-filter-btn' value='&#9866;' />
-                                <label for='biography'>Életrajz</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='history' class='film-filter-btn' value='&#9866;' />
-                                <label for='history'>Történelem</label>
-                            </li>
-                            <li>
-                                <input title='Ez egy háromállapotú gomb: &#9866;,&#x2705;,&#x274C;' type='button' id='war' class='film-filter-btn' value='&#9866;' />
-                                <label for='war'>Háborús</label>
-                            </li>
-                        </ul>
+                        <input type='search' placeholder='Filmcím keresés...' size="40" class='film-search-input'>
+                        <ul class='film-filter-list'></ul>
                         <button class='film-search-btn'>Keresés</button>
                     </div>
                     <ul class='film-list' id='film-list'>

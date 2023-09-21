@@ -668,6 +668,11 @@ section.active{
     padding: 1rem 0.3rem;
 }
 
+.film-search-input::-webkit-search-cancel-button,
+.film-search-input::-webkit-search-clear-button {
+    display: none;
+}
+
 .film-search-input:focus{
     border: 2px solid var(--light-gray-70);
 }
