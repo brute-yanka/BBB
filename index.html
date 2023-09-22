@@ -4,10 +4,8 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link href='https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css' rel='stylesheet'>
-    <link rel='stylesheet' href='CSS/swiper-bundle.min.css'>
     <link rel='stylesheet' href='CSS/style.css'>
     <link rel='icon' type='image/x-icon' href='Images/Others/favicon.svg'>
-    <script src='JS/swiper-bundle.min.js'></script>
     <script src='JS/team.js'></script>
     <script src="JS/lang.js"></script>
     <script src="JS/categories.js"></script>
@@ -86,48 +84,7 @@
             </article>
             <hr class='horizontal-rule'>
             <!--======== IMAGE SLIDER ========-->
-            <h2 class='section-title'>Képnézegető <i class='ri-image-line'></i></h2>
-            <article class='gallery-container container'>
-                <div class='gallery-swiper swiper'>
-                    <div class='swiper-wrapper'>
-                        <div class='gallery-content swiper-slide'>
-                            <img src='Images/Slider/project1.jpg' alt='Galéria kép' class='gallery-img'>
-                            <div>
-                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
-                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
-                            </div>
-                        </div>
-                        <div class='gallery-content swiper-slide'>
-                            <img src='Images/Slider/project2.jpg' alt='Galéria kép' class='gallery-img'>
-                            <div>
-                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
-                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
-                            </div>
-                        </div>
-                        <div class='gallery-content swiper-slide'>
-                            <img src='Images/Slider/project3.jpg' alt='Galéria kép' class='gallery-img'>
-                            <div>
-                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
-                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
-                            </div>
-                        </div>
-                        <div class='gallery-content swiper-slide'>
-                            <img src='Images/Slider/project4.jpg' alt='Galéria kép' class='gallery-img'>
-                            <div>
-                                <h1 class='gallery-title'>Lorem, ipsum.</h1>
-                                <span class='gallery-subtitle'>Lorem ipsum dolor sit amet.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='swiper-button-next'>
-                        <i class='ri-arrow-right-s-line'></i>
-                    </div>
-                    <div class='swiper-button-prev'>
-                        <i class='ri-arrow-left-s-line'></i>
-                    </div>
-                    <div class='swiper-pagination'></div>
-                </div>
-            </article>
+            
             <!--======== MODAL ========-->
             <article class='modal'>
                 <div class='modal-content'>
@@ -142,6 +99,26 @@
         <section class='film' data-page='film'>
             <h2 class='section-title'>Filmajánló</h2>
             <article class='film-container'>
+                <div class="film-counter-container">
+                    <div class="film-counter-box">
+                        <span></span>
+                        <i class="ri-4k-line"></i>
+                        <h2 data-val="17">17</h2>
+                        <p>4K-s film</p>
+                    </div>
+                    <div class="film-counter-box">
+                        <span></span>
+                        <i class="ri-movie-2-line"></i>
+                        <h2 data-val="30">30</h2>
+                        <p>Filmek száma</p>
+                    </div>
+                    <div class="film-counter-box">
+                        <span></span>
+                        <i class="ri-hd-line"></i>
+                        <h2 data-val="13">13</h2>
+                        <p>HD-s film</p>
+                    </div>
+                </div>
                 <div class='film-top-rated'>
                     <hr class='horizontal-rule'>
                     <div class='film-wrapper'>
