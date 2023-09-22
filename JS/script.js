@@ -12,7 +12,7 @@ function activeLink() {
         });
         window.scrollTo(0,0);
     });
-}
+};
 
 navigationLinks.forEach(n => n.addEventListener('click', activeLink));
 
@@ -64,10 +64,10 @@ document.querySelectorAll('.modal-button').forEach((modalBtn, i) => {
 });
 
 if(modalClose){
-    modalClose.addEventListener('click', () =>{
+    modalClose.addEventListener('click', () => {
         document.querySelector('.modal').classList.remove('active-modal')
     })
-}
+};
 
 // ========== LANGUAGES ==========
 for (let i = 0; i < lang.length;i++) {
@@ -129,13 +129,13 @@ for (let i = 0; i < topRated.length;i++) {
 
 // ========== MOVIE FILTER ==========
 categories.sort((a, b) => a.name.localeCompare(b.name));
-for (let i = 0; i < categories.length; i++){
+for (let i = 0; i < categories.length; i++) {
     const li = createElementWithAttributes('li', {});
-    const input = createElementWithAttributes('input', { title: 'Ez egy háromállapotú gomb: ⚊, ✅, ❌', type: 'button', id: categories[i].type, class: 'film-filter-btn', value: '⚊' });
+    const input = createElementWithAttributes('input', { title: 'Ez egy kétállapotú gomb: ✅, ⚊', type: 'button', id: categories[i].type, class: 'film-filter-btn', value: '⚊' });
     const label = createElementWithAttributes('label', { for: categories[i].type }, categories[i].name);
     document.querySelector('.film-filter-list').append(li);
     li.append(input, label);
-}
+};
 
 document.querySelectorAll('.film-filter-btn').forEach((item) => {
     item.addEventListener('click', () => {
@@ -144,9 +144,6 @@ document.querySelectorAll('.film-filter-btn').forEach((item) => {
                 item.value = '\u2705';
                 break;
             case '\u2705':
-                item.value = '\u274C';
-                break;
-            case '\u274C':
                 item.value = '\u268A';
                 break;
             default:
@@ -158,44 +155,32 @@ document.querySelectorAll('.film-filter-btn').forEach((item) => {
 const filmContainer = document.getElementById('film-list');
 
 document.querySelector('.film-search-btn').addEventListener('click', () => {
-    const selectedGenres = Array.from(document.querySelectorAll('.film-filter-btn')).filter((input) => {
-        return input.value === '\u2705' || input.value === '\u274C'
-    }).map((input) => ({
-        type: input.getAttribute('id'),
-        need: input.value === '\u2705'
-    }));
-
-    const filteredFilms = films.filter((film) => {
-        for (const genre of selectedGenres) {
-            const hasGenre = film.filter.includes(genre.type);
-            if (genre.need && !hasGenre) return false;
-            else if (!genre.need && hasGenre) return false;
-        }
-        return true;
+    const filteredFilms = films.filter(film => {
+        return Array.from(document.querySelectorAll('.film-filter-btn')).some(input => {
+            return input.value === '\u2705' && film.filter.includes(input.getAttribute('id'));
+        });
     });
 
     filmContainer.innerHTML = '';
-    setTimeout(() => {
-        filteredFilms.forEach((film) => {
-            const card = createElementWithAttributes('li', { class: 'film-card' });
-            const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
-            const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
-            const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
-            const h3 = createElementWithAttributes('h3', { class: 'film-title' }, film.title);
-            const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
-            const data = createElementWithAttributes('div', { class: 'film-card-data' });
-            const badge = createElementWithAttributes('div', { class: 'film-badge badge-outline' }, film.badge);
-            const duration = createElementWithAttributes('div', { class: 'film-duration' }, `<i class="ri-time-line"></i>`);
-            const time = createElementWithAttributes('time', {}, film.duration);
-            const rating = createElementWithAttributes('div', { class: 'film-rating' }, `<i class="ri-star-line"></i> ${film.rating}`);
-            filmContainer.append(card);
-            card.append(figure, wrapper, data);
-            figure.append(img);
-            wrapper.append(h3, date);
-            data.append(badge, duration, rating);
-            duration.append(time);
-        });
-    }, 1000);
+    filteredFilms.forEach((film) => {
+        const card = createElementWithAttributes('li', { class: 'film-card' });
+        const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
+        const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
+        const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
+        const h3 = createElementWithAttributes('h3', { class: 'film-title' }, film.title);
+        const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
+        const data = createElementWithAttributes('div', { class: 'film-card-data' });
+        const badge = createElementWithAttributes('div', { class: 'film-badge badge-outline' }, film.badge);
+        const duration = createElementWithAttributes('div', { class: 'film-duration' }, `<i class="ri-time-line"></i>`);
+        const time = createElementWithAttributes('time', {}, film.duration);
+        const rating = createElementWithAttributes('div', { class: 'film-rating' }, `<i class="ri-star-line"></i> ${film.rating}`);
+        filmContainer.append(card);
+        card.append(figure, wrapper, data);
+        figure.append(img);
+        wrapper.append(h3, date);
+        data.append(badge, duration, rating);
+        duration.append(time);
+    });
 });
 
 document.querySelector('.film-search-input').addEventListener('input', function() {
@@ -206,7 +191,7 @@ document.querySelector('.film-search-input').addEventListener('input', function(
             filmContainer.innerHTML = '';
             return;
         }
-        const filteredFilms = films.filter((film) => (film.title.toLowerCase().includes(searchQuery)));
+        const filteredFilms = films.filter((film) => film.title.toLowerCase().includes(searchQuery));
 
         filmContainer.innerHTML = '';
         filteredFilms.forEach((film) => {
@@ -228,5 +213,7 @@ document.querySelector('.film-search-input').addEventListener('input', function(
             data.append(badge, duration, rating);
             duration.append(time);
         });
-    }, 1000);
+
+        document.querySelectorAll('.film-filter-btn').forEach((input) => input.value = '⚊');
+    }, 500);
 });

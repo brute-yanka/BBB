@@ -1,5 +1,6 @@
 let films = [
     {
+        id: 1,
         filter: ['adventure', 'comedy', 'fantasy'],
         picture: 'barbie.jpg',
         title: 'Barbie',
@@ -9,6 +10,7 @@ let films = [
         rating: '7.1',
     },
     {
+        id: 2,
         filter: ['adventure', 'family', 'fantasy'],
         picture: 'mermaid.jpg',
         title: 'A kis hableány',
@@ -18,6 +20,7 @@ let films = [
         rating: '7.2',
     },
     {
+        id: 3,
         filter: ['horror', 'mystery', 'thriller'],
         picture: 'apaca.jpg',
         title: 'Az apáca 2',
@@ -27,6 +30,7 @@ let films = [
         rating: '9.3',
     },
     {
+        id: 4,
         filter: ['biography', 'drama', 'history'],
         picture: 'oppenheimer.jpg',
         title: 'Oppenheimer',
@@ -36,6 +40,7 @@ let films = [
         rating: '8.6',
     },
     {
+        id: 5,
         filter: ['drama', 'thriller'],
         picture: 'remenyrabja.jpg',
         title: 'A remény rabjai',
@@ -45,6 +50,7 @@ let films = [
         rating: '9.3',
     },
     {
+        id: 6,
         filter: ['crime', 'drama'],
         picture: 'keresztapa.jpg',
         title: 'A Keresztapa',
@@ -54,6 +60,7 @@ let films = [
         rating: '9.2',
     },
     {
+        id: 7,
         filter: ['action', 'crime', 'drama'],
         picture: 'sotetlovag.jpg',
         title: 'A sötét lovag',
@@ -63,6 +70,7 @@ let films = [
         rating: '9.0',
     },
     {
+        id: 8,
         filter: ['animation', 'action', 'adventure'],
         picture: 'pokember.jpg',
         title: 'Pókember: A pókverzumon át',
@@ -72,6 +80,7 @@ let films = [
         rating: '8.7',
     },
     {
+        id: 9,
         filter: ['adventure', 'drama', 'scifi'],
         picture: 'csillagok.jpg',
         title: 'Csillagok között',
@@ -81,6 +90,7 @@ let films = [
         rating: '8.7',
     },
     {
+        id: 10,
         filter: ['adventure', 'drama', 'war'],
         picture: 'becstelen.jpg',
         title: 'Becstelen brigantyk',
@@ -90,6 +100,7 @@ let films = [
         rating: '8.3',
     },
     {
+        id: 11,
         filter: ['action', 'adventure', 'drama'],
         picture: 'dune.jpg',
         title: 'Dune',
@@ -99,6 +110,7 @@ let films = [
         rating: '8.0',
     },
     {
+        id: 12,
         filter: ['action', 'thriller'],
         picture: 'missionimpossible.jpg',
         title: 'Mission: Impossible - Leszámolás - Első Rész',
@@ -108,6 +120,7 @@ let films = [
         rating: '8.0',
     },
     {
+        id: 13,
         filter: ['action', 'scifi'],
         picture: 'tenet.jpg',
         title: 'Tenet',
@@ -117,6 +130,7 @@ let films = [
         rating: '5.6',
     },
     {
+        id: 14,
         filter: ['adventure', 'action'],
         picture: 'indiana.jpg',
         title: 'Indiana Jones és a sors tárcsája',
@@ -126,6 +140,7 @@ let films = [
         rating: '6.7',
     },
     {
+        id: 15,
         filter: ['action', 'crime', 'thriller'],
         picture: 'johnwick.jpg',
         title: 'John Wick: 4. felvonás',
@@ -135,6 +150,7 @@ let films = [
         rating: '7.8',
     },
     {
+        id: 16,
         filter: ['action', 'crime', 'drama'],
         picture: 'batman.jpg',
         title: 'Batman',
@@ -144,6 +160,7 @@ let films = [
         rating: '7.8',
     },
     {
+        id: 17,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'avatar.jpg',
         title: 'Avatar: A víz útja',
@@ -153,6 +170,7 @@ let films = [
         rating: '7.6',
     },
     {
+        id: 18,
         filter: ['action', 'drama', 'thriller'],
         picture: 'szovetseg.jpg',
         title: 'A szövetség',
@@ -162,6 +180,7 @@ let films = [
         rating: '7.5',
     },
     {
+        id: 19,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo.jpg',
         title: 'A védelmező',
@@ -171,6 +190,7 @@ let films = [
         rating: '7.2',
     },
     {
+        id: 20,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo2.jpg',
         title: 'A védelmező 2',
@@ -180,6 +200,7 @@ let films = [
         rating: '6.7',
     },
     {
+        id: 21,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo3.jpg',
         title: 'A védelmező 3',
@@ -189,6 +210,7 @@ let films = [
         rating: '7.1',
     },
     {
+        id: 22,
         filter: ['comedy', 'horror', 'thriller'],
         picture: 'menu.jpg',
         title: 'A menü',
@@ -198,6 +220,7 @@ let films = [
         rating: '7.2',
     },
     {
+        id: 23,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'flash.jpg',
         title: 'Flash – A Villám',
@@ -207,6 +230,7 @@ let films = [
         rating: '6.8',
     },
     {
+        id: 24,
         filter: ['action', 'adventure', 'scifi'],
         picture: 'inception.jpg',
         title: 'Eredet',
@@ -216,6 +240,7 @@ let films = [
         rating: '8.8',
     },
     {
+        id: 25,
         filter: ['comedy', 'romance'],
         picture: 'nohardfeelings.jpg',
         title: 'Barátnőt felveszünk',
@@ -225,6 +250,7 @@ let films = [
         rating: '6.4',
     },
     {
+        id: 26,
         filter: ['action', 'crime', 'thriller'],
         picture: 'heartofstone.jpg',
         title: 'Mindent vagy semmit',
@@ -234,6 +260,7 @@ let films = [
         rating: '5.7',
     },
     {
+        id: 27,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'karibtenger.jpg',
         title: 'A Karib-tenger kalózai',
@@ -242,8 +269,8 @@ let films = [
         duration: '2 óra 23 perc',
         rating: '8.1',
     },
-
     {
+        id: 28,
         filter: ['action', 'biography', 'drama'],
         picture: 'hajsza.jpg',
         title: 'Hajsza a győzelemért',
@@ -253,6 +280,7 @@ let films = [
         rating: '8.1',
     },
     {
+        id: 29,
         filter: ['animation', 'adventure', 'comedy'],
         picture: 'ratatouille.jpg',
         title: 'L’ecsó',
@@ -262,6 +290,7 @@ let films = [
         rating: '8.1',
     },
     {
+        id: 30,
         filter: ['biography', 'drama', 'history'],
         picture: 'hacksaw.jpg',
         title: 'A fegyvertelen katona',

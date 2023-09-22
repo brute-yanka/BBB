@@ -4,11 +4,11 @@ let categories = [
         type: 'action'
     },
     {
-        name: 'Bűnügyi',
+        name: 'Krimi',
         type: 'crime'
     },
     {
-        name: 'Krimi',
+        name: 'Thriller',
         type: 'thriller'
     },
     {
@@ -40,7 +40,7 @@ let categories = [
         type: 'animation'
     },
     {
-        name: 'Életrajz',
+        name: 'Életrajzi',
         type: 'biography'
     },
     {
@@ -48,7 +48,7 @@ let categories = [
         type: 'fantasy'
     },
     {
-        name: 'Történelem',
+        name: 'Történelemi',
         type: 'history'
     },
     {

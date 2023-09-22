@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='hu'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -76,6 +76,7 @@
             <!--======== TEAM ========-->
             <h2 class='section-title'>Csapatunk <i class='ri-team-line'></i></h2>
             <article class='team-container container'></article>
+            <hr class='horizontal-rule'>
             <!--======== LANGUAGES ========-->
             <h2 class='section-title'>Használt nyelvek <i class='ri-braces-line'></i></h2>
             <article class='lang-container container'>
@@ -83,6 +84,7 @@
                     <div class='lang-info'></div>
                 </div>
             </article>
+            <hr class='horizontal-rule'>
             <!--======== IMAGE SLIDER ========-->
             <h2 class='section-title'>Képnézegető <i class='ri-image-line'></i></h2>
             <article class='gallery-container container'>
@@ -130,35 +132,32 @@
             <article class='modal'>
                 <div class='modal-content'>
                     <h4 class='modal-title'></h4>
-                    <hr class='modal-hr'>
+                    <hr class='horizontal-rule'>
                     <i class='ri-close-line modal-close'></i>
                     <p class='modal-description'></p>
                 </div>
             </article>
         </section>
         <!--======== FILM ========-->
-        <!-- KERESÉS ADOTT FILMRE -->
-        <!-- TÖBB/KEVESEBB MEGJELENITO GOMB -->
         <section class='film' data-page='film'>
             <h2 class='section-title'>Filmajánló</h2>
-            <article class='film-container container'>
+            <article class='film-container'>
                 <div class='film-top-rated'>
-                    <hr class='film-hr'>
+                    <hr class='horizontal-rule'>
                     <div class='film-wrapper'>
                         <h2 class='article-title'>Legjobbra értékelt filmek</h2>
                     </div>
                     <ul class='film-list' id="film-top-rated-list"></ul>
+                    <hr class='horizontal-rule'>
                 </div>
                 <div class='film-search'>
-                    <hr class='film-hr'>
                     <div class='film-wrapper'>
                         <h2 class='article-title'>Filmkereső</h2>
                         <input type='search' placeholder='Filmcím keresés...' size="40" class='film-search-input'>
                         <ul class='film-filter-list'></ul>
                         <button class='film-search-btn'>Keresés</button>
                     </div>
-                    <ul class='film-list' id='film-list'>
-                    </ul>
+                    <ul class='film-list' id='film-list'></ul>
                 </div>
             </article>
         </section>
