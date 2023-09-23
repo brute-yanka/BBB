@@ -27,6 +27,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family), Helvetica, sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-text-select: none;
+    -webkit-user-select: none;
 }
 
 body{
@@ -606,7 +610,8 @@ section.active{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    max-width: 1620px;
     gap: 50px;
 }
 
@@ -643,7 +648,7 @@ section.active{
     position: relative;
     height: 2.5rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 0.5rem;
     box-shadow: 0 0px 5px 3px rgba(0,0,0,0.12);
     margin-bottom: 2rem;
@@ -711,7 +716,7 @@ section.active{
     width: 100px;
     height: 35px;
     background: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--white-color);
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-400);
     border-radius: 0.5rem;
@@ -724,6 +729,7 @@ section.active{
     font-size: var(--font-size-4);  
     font-weight: var(--font-weight-500);
     color: var(--title-color);
+    text-align: center;
 }
 
 .film-card{
@@ -763,6 +769,9 @@ section.active{
     font-size: var(--font-size-4);
     transition: var(--transition-1);
     cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .film-title-wrapper time{
@@ -984,9 +993,5 @@ section.active{
     }
     .lang-info{
         gap: 3rem;
-    }
-    .film-filter-list{
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
     }
 }
