@@ -1,6 +1,5 @@
 let team = [
     {
-        id: 1,
         picture: 'profile.png',
         alt: '',
         name: 'Veres Zsolt',
@@ -9,7 +8,6 @@ let team = [
         introduction: 'Elso'
     },
     {
-        id: 2,
         picture: 'profile.png',
         alt: '',
         name: 'Bokor Balázs',
@@ -18,7 +16,6 @@ let team = [
         introduction: 'Masodik'
     },
     {
-        id: 3,
         picture: 'profile.png',
         alt: '',
         name: 'Ónadi Péter',
@@ -27,12 +24,11 @@ let team = [
         introduction: 'Harmadik'
     },
     {
-        id: 4,
         picture: 'profile.png',
         alt: '',
         name: 'Cseh Imre',
         icon: '<i class="ri-presentation-line"></i>',
         role: 'Felkészítő tanár',
         introduction: 'Negyedik'
-    },
+    }
 ];

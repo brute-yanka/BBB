@@ -1,6 +1,6 @@
 let films = [
     {
-        id: 1,
+        id: 0,
         filter: ['adventure', 'comedy', 'fantasy'],
         picture: 'barbie.jpg',
         title: 'Barbie',
@@ -8,9 +8,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '1 óra 54 perc',
         rating: '7.1',
+        description: '"Barbie" egy szórakoztató és tanulságos animációs film, amelyben Barbie, a stílusos babajelmezű karakter, kalandos utazásra indul egy titokzatos világban. A film a barátságról, az önbizalomról és a csodálatos kalandokról szól, miközben Barbie és barátai új világokat fedeznek fel.'
     },
     {
-        id: 2,
+        id: 1,
         filter: ['adventure', 'family', 'fantasy'],
         picture: 'mermaid.jpg',
         title: 'A kis hableány',
@@ -18,9 +19,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 15 perc',
         rating: '7.2',
+        description: '"A kis hableány" egy Disney klasszikus, amely egy fiatal hercegnő, Ariel történetét meséli el, aki egy tengeri hableányként vágyik az emberi világba. A film a vágyakról, a kalandról és a szerelmről szól, miközben Ariel egy merész utazásra indul, hogy elérje álmait.'
     },
     {
-        id: 3,
+        id: 2,
         filter: ['horror', 'mystery', 'thriller'],
         picture: 'apaca.jpg',
         title: 'Az apáca 2',
@@ -28,9 +30,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '1 óra 50 perc',
         rating: '9.3',
+        description: 'Az "Az apáca 2" folytatja a rejtélyes apácaházban játszódó történetet, ahol a misztikum és a veszély újra találkozik. A rejtőzködő és hallgatag apácák között rejtélyes események kezdenek kibontakozni, amelyek elvezetnek egy régi titok felfedezéséhez, ami életüket és hiteüket veszélyezteti.'
     },
     {
-        id: 4,
+        id: 3,
         filter: ['biography', 'drama', 'history'],
         picture: 'oppenheimer.jpg',
         title: 'Oppenheimer',
@@ -38,9 +41,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '3 óra',
         rating: '8.6',
+        description: '"Oppenheimer" egy háborús dráma, amely Robert Oppenheimer életét és a Manhattan-terv fejlesztését követi. Oppenheimer és csapata a nukleáris fegyverek születését irányítja, és a döntések súlyos etikai kérdéseket vetnek fel.'
     },
     {
-        id: 5,
+        id: 4,
         filter: ['drama', 'thriller'],
         picture: 'remenyrabja.jpg',
         title: 'A remény rabjai',
@@ -48,9 +52,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 22 perc',
         rating: '9.3',
+        description: '"A remény rabjai" egy megrázó és mélyen elgondolkodtató dráma, amely a második világháború idején játszódik. A film a túlélés és az emberi kitartás témáját járja körül egy csoport fogoly és az őket őrző náci katonák közötti erős kapcsolaton keresztül.'
     },
     {
-        id: 6,
+        id: 5,
         filter: ['crime', 'drama'],
         picture: 'keresztapa.jpg',
         title: 'A Keresztapa',
@@ -58,9 +63,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 55 perc',
         rating: '9.2',
+        description: 'Francis Ford Coppola kultikus filmje, a "Keresztapa," egy családi maffia dinasztiáról szól, amelynek feje Don Vito Corleone. A film bemutatja a maffiavilág hatalmát, hűségét és az árulást, miközben a Corleone család küzdelmeit követjük.'
     },
     {
-        id: 7,
+        id: 6,
         filter: ['action', 'crime', 'drama'],
         picture: 'sotetlovag.jpg',
         title: 'A sötét lovag',
@@ -68,9 +74,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 32 perc',
         rating: '9.0',
+        description: 'A "Sötét lovag" a Batman-sorozat egyik legizgalmasabb része, ahol Batman, a sötét lovag, a Jokert és más gonosztevőket próbál megállítani Gotham Cityben. A film sötét hangulata és Heath Ledger elképesztő alakítása a Jokert emlékezetessé teszi.'
     },
     {
-        id: 8,
+        id: 7,
         filter: ['animation', 'action', 'adventure'],
         picture: 'pokember.jpg',
         title: 'Pókember: A pókverzumon át',
@@ -78,9 +85,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 20 perc',
         rating: '8.7',
+        description: 'A "Pókember: A pókverzumon át" egy látványos animációs kaland, amelyben több pókember karakter keresztezi az útját. A fiatal Miles Morales kénytelen megtanulni a pókember képességeit, hogy megmentse a világot.'
     },
     {
-        id: 9,
+        id: 8,
         filter: ['adventure', 'drama', 'scifi'],
         picture: 'csillagok.jpg',
         title: 'Csillagok között',
@@ -88,9 +96,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 49 perc',
         rating: '8.7',
+        description: '"Csillagok között" egy lenyűgöző sci-fi film, amelyben emberek egy űrhajón indulnak el, hogy új otthont találjanak egy másik bolygón. A film a család, a túlélés és az emberi kitartás fontosságát hangsúlyozza.'
     },
     {
-        id: 10,
+        id: 9,
         filter: ['adventure', 'drama', 'war'],
         picture: 'becstelen.jpg',
         title: 'Becstelen brigantyk',
@@ -98,9 +107,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 33 perc',
         rating: '8.3',
+        description: '"Becstelen brigantyk" egy izgalmas gengszterfilm, amely a bűnbandák és az erőszak világát mutatja be. A film tele van fordulatokkal és karakterdrámákkal.'
     },
     {
-        id: 11,
+        id: 10,
         filter: ['action', 'adventure', 'drama'],
         picture: 'dune.jpg',
         title: 'Dune',
@@ -108,9 +118,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 35 perc',
         rating: '8.0',
+        description: '"Dune" egy epikus sci-fi film, amely egy messzi bolygó, Arrakis, hatalmi harcait követi. A film a politikai intrikák, a hatalom és a vallás összecsapását mutatja be, miközben egy fiatal hős próbálja megváltoztatni a világ sorsát.'
     },
     {
-        id: 12,
+        id: 11,
         filter: ['action', 'thriller'],
         picture: 'missionimpossible.jpg',
         title: 'Mission: Impossible - Leszámolás - Első Rész',
@@ -118,9 +129,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 43 perc',
         rating: '8.0',
+        description: '"Mission: Impossible - Leszámolás - Első Rész" egy izgalmas akciófilm sorozat része, ahol Ethan Hunt és csapata újabb küldetésekbe keveredik, hogy ves'
     },
     {
-        id: 13,
+        id: 12,
         filter: ['action', 'scifi'],
         picture: 'tenet.jpg',
         title: 'Tenet',
@@ -128,9 +140,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 30 perc',
         rating: '5.6',
+        description: ' "Tenet" egy lenyűgöző sci-fi thriller, amely egy titkos ügynök küldetését követi, hogy megakadályozza a világvégét. A film a időutazás és a rejtélyek körül forog, miközben az ügynök próbálja megfejteni a váratlan események hátterét.'
     },
     {
-        id: 14,
+        id: 13,
         filter: ['adventure', 'action'],
         picture: 'indiana.jpg',
         title: 'Indiana Jones és a sors tárcsája',
@@ -138,9 +151,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 20 perc',
         rating: '6.7',
+        description: '"Indiana Jones és a sors tárcsája" egy izgalmas kaland, amely az archeológus Indiana Jones újabb veszélyekkel és rejtélyekkel teli utazását mutatja be. A film az ősi kincsek utáni vágyról, a veszélyekről és a kalandról szól.'
     },
     {
-        id: 15,
+        id: 14,
         filter: ['action', 'crime', 'thriller'],
         picture: 'johnwick.jpg',
         title: 'John Wick: 4. felvonás',
@@ -148,9 +162,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 49 perc',
         rating: '7.8',
+        description: '"John Wick: 4. felvonás" egy akciódús sorozat negyedik része, ahol John Wick ismét bosszút áll azokon, akik hátrányosan érintették. A film a cselekvés és az intrikák közötti mérkőzés során követi John Wicket, ahogy az ellenfeleihez veti magát.'
     },
     {
-        id: 16,
+        id: 15,
         filter: ['action', 'crime', 'drama'],
         picture: 'batman.jpg',
         title: 'Batman',
@@ -158,9 +173,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 56 perc',
         rating: '7.8',
+        description: '"Batman" egy sötét és misztikus hőskép története, amelyben Bruce Wayne, a gazdag filantróp, az éjszakai álarc mögött harcol a bűnözők ellen. A film az igazságosságért és a város védelméért folytatott küzdelmet bemutatja, miközben Batman Gotham Cityben járja.'
     },
     {
-        id: 17,
+        id: 16,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'avatar.jpg',
         title: 'Avatar: A víz útja',
@@ -168,9 +184,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '3 óra 12 perc',
         rating: '7.6',
+        description: '"Avatar: A víz útja" egy lenyűgöző fantasy film, amely az elemek hatalmát és az összetartást kutatja. A film egy fiatal vízvezér és csapata történetét meséli el, akik a víz elem védelmezőiként szembeszállnak a gonosz erőkkel.'
     },
     {
-        id: 18,
+        id: 17,
         filter: ['action', 'drama', 'thriller'],
         picture: 'szovetseg.jpg',
         title: 'A szövetség',
@@ -178,9 +195,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 3 perc',
         rating: '7.5',
+        description: '"A szövetség" egy fantasy kalandfilm, amely egy csoport hőst követ, akiknek küldetése a gonosz elleni harc és az ősi varázslatok újraélesztése. A film a barátságról és az összetartásról szól, miközben a hősök együtt veszik fel a küzdelmet a sötétséggel.'
     },
     {
-        id: 19,
+        id: 18,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo.jpg',
         title: 'A védelmező',
@@ -188,9 +206,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 12 perc',
         rating: '7.2',
+        description: '"A védelmező" egy akciókaland, amely egy egykori katona új életét és küzdelmét mutatja be, amikor egy titkos szervezet veszélyezteti a szeretteit. A film az önfeláldozásról és a hazafiasságról szól, miközben a védelmező minden eszközt bevet a családja és az országa védelmében.'
     },
     {
-        id: 20,
+        id: 19,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo2.jpg',
         title: 'A védelmező 2',
@@ -198,9 +217,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 1 perc',
         rating: '6.7',
+        description: '"A védelmező 2" folytatja a védelmező történetét, amikor újabb fenyegetés merül fel. A film a hűségről és az akcióval teli küzdelemről szól, miközben a védelmező ismét veszélybe kerül.'
     },
     {
-        id: 21,
+        id: 20,
         filter: ['action', 'crime', 'thriller'],
         picture: 'vedelmezo3.jpg',
         title: 'A védelmező 3',
@@ -208,9 +228,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '1 óra 49 perc',
         rating: '7.1',
+        description: '"A védelmező 3" tovább viszi a védelmező történetét, amikor egy újabb krízis sújt le rá. A film az összetartásról és a család erejéről szól, miközben a védelmező minden erőt bevet a szerettei védelmében.'
     },
     {
-        id: 22,
+        id: 21,
         filter: ['comedy', 'horror', 'thriller'],
         picture: 'menu.jpg',
         title: 'A menü',
@@ -218,9 +239,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '1 óra 46 perc',
         rating: '7.2',
+        description: '"A menü" egy humoros és tanulságos vígjáték, amely egy étterem életét mutatja be, ahol a különböző személyiségek és sztorik ütköznek egymással. A film az ételek, a szerelem és az álmodozás világát járja körül.'
     },
     {
-        id: 23,
+        id: 22,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'flash.jpg',
         title: 'Flash – A Villám',
@@ -228,9 +250,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 24 perc',
         rating: '6.8',
+        description: '"Flash – A Villám" egy szuperhősfilm, amely Barry Allen, a gyors villám, történetét meséli el. A film a hősies tettekről és a várost fenyegető veszélyekről szól, miközben Flash próbálja megvédeni a várost a gonosz erőktől.'
     },
     {
-        id: 24,
+        id: 23,
         filter: ['action', 'adventure', 'scifi'],
         picture: 'inception.jpg',
         title: 'Eredet',
@@ -238,9 +261,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 28 perc',
         rating: '8.8',
+        description: '"Eredet" egy lenyűgöző sci-fi kaland, amelyben Dom Cobb, egy tehetséges tolvaj, képes mások álmait manipulálni. A film az álomvilág és a valóság közötti határokat feszegeti, miközben egy veszélyes küldetést teljesítenek.'
     },
     {
-        id: 25,
+        id: 24,
         filter: ['comedy', 'romance'],
         picture: 'nohardfeelings.jpg',
         title: 'Barátnőt felveszünk',
@@ -248,9 +272,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '1 óra 43 perc',
         rating: '6.4',
+        description: ' "Barátnőt felveszünk" egy romantikus vígjáték, amely két barát közötti viszonyt követ a váratlan kihívások és fordulatok során. A film a barátságról, a szeretetről és a humorral teli pillanatokról szól.'
     },
     {
-        id: 26,
+        id: 25,
         filter: ['action', 'crime', 'thriller'],
         picture: 'heartofstone.jpg',
         title: 'Mindent vagy semmit',
@@ -258,9 +283,10 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 2 perc',
         rating: '5.7',
+        description: '"Mindent vagy semmit" egy drámafilm, amely egy fiatal tehetség küzdelmét mutatja be a nagy álmok és a vágyak megvalósítása érdekében. A film a tehetségről, a kitartásról és a lehetőségekről szól, miközben a főszereplő mindenét kockáztatja a sikerért.'
     },
     {
-        id: 27,
+        id: 26,
         filter: ['action', 'adventure', 'fantasy'],
         picture: 'karibtenger.jpg',
         title: 'A Karib-tenger kalózai',
@@ -268,9 +294,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 23 perc',
         rating: '8.1',
+        description: 'A "Karib-tenger kalózai" egy kalandos film sorozat, amely a kalózok aranykorában játszódik. A vakmerő kapitány, Jack Sparrow különböző kalandokba keveredik, amelyek tele vannak kincsekkel és veszéllyel.'
     },
     {
-        id: 28,
+        id: 27,
         filter: ['action', 'biography', 'drama'],
         picture: 'hajsza.jpg',
         title: 'Hajsza a győzelemért',
@@ -278,9 +305,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '2 óra 3 perc',
         rating: '8.1',
+        description: '"Hajsza a győzelemért" egy izgalmas sportfilm, amely az autóversenyzés világába vezeti be a nézőket. A film a versenyzők, a csapatok és a szenvedélyes rajongók életét és törekvéseit mutatja be, miközben a sebesség és a versengés izgalmát örökíti meg.'
     },
     {
-        id: 29,
+        id: 28,
         filter: ['animation', 'adventure', 'comedy'],
         picture: 'ratatouille.jpg',
         title: 'L’ecsó',
@@ -288,9 +316,10 @@ let films = [
         badge: '<i class="ri-hd-line"></i>',
         duration: '1 óra 51 perc',
         rating: '8.1',
+        description: '"Lecsó" egy érzelmekkel teli dráma, amely egy bonyolult szerelmi háromszög körül bontakozik ki. A film a vágyak, a szenvedély és a választások témáját járja körül, miközben az emberi szív mélyére pillant be.'
     },
     {
-        id: 30,
+        id: 29,
         filter: ['biography', 'drama', 'history'],
         picture: 'hacksaw.jpg',
         title: 'A fegyvertelen katona',
@@ -298,5 +327,6 @@ let films = [
         badge: '<i class="ri-4k-line"></i>',
         duration: '2 óra 19 perc',
         rating: '8.1',
-    },
+        description: ' "A fegyvertelen katona" egy háborús film, amely egy katonai kivonulás eseményeit követi egy olyan területen, ahol a harcoktól való félelem és az emberi kapcsolatok erőssége is megmutatkozik.'
+    }
 ];

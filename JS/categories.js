@@ -58,5 +58,5 @@ let categories = [
     {
         name: 'Családi',
         type: 'family'
-    },
+    }
 ];

@@ -10,6 +10,7 @@
     <script src="JS/lang.js"></script>
     <script src="JS/categories.js"></script>
     <script src='JS/films.js'></script>
+    <script src="JS/counter.js"></script>
     <script defer src='JS/script.js'></script>
     <title>Bakonyi Bitfaragó Verseny 2023</title>
 </head>
@@ -99,26 +100,7 @@
         <section class='film' data-page='film'>
             <h2 class='section-title'>Filmajánló</h2>
             <article class='film-container'>
-                <div class="film-counter-container">
-                    <div class="film-counter-box">
-                        <span></span>
-                        <i class="ri-4k-line"></i>
-                        <h2 data-val="17">17</h2>
-                        <p>4K-s film</p>
-                    </div>
-                    <div class="film-counter-box">
-                        <span></span>
-                        <i class="ri-movie-2-line"></i>
-                        <h2 data-val="30">30</h2>
-                        <p>Filmek száma</p>
-                    </div>
-                    <div class="film-counter-box">
-                        <span></span>
-                        <i class="ri-hd-line"></i>
-                        <h2 data-val="13">13</h2>
-                        <p>HD-s film</p>
-                    </div>
-                </div>
+                <div class="film-counter-container"></div>
                 <div class='film-top-rated'>
                     <hr class='horizontal-rule'>
                     <div class='film-wrapper'>
@@ -135,6 +117,27 @@
                         <button class='film-search-btn'>Keresés</button>
                     </div>
                     <ul class='film-list' id='film-list'></ul>
+                </div>
+            </article>
+            <article class="films-modal-container container">
+                <div class="films-modal">
+                    <div class="films-modal-content">
+                        <i class="ri-close-line films-modal-close"></i>
+                        <h1 class="films-modal-title"></h1>
+                        <div class="films-modal-information">
+                            <div class="film-badge badge-outline"></div>
+                            <div class="film-duration"></div>
+                            <div class="film-rating"></div>
+                            <div class="film-year"></div>
+                        </div>
+                        <div class="film-content">
+                            <div class="film-data-container">
+                                <img src="" alt="" class="films-modal-img">
+                                <div class="film-modal-only"></div>
+                            </div>
+                            <p class="film-description"></p>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
