@@ -183,7 +183,7 @@ document.querySelector('.film-search-btn').addEventListener('click', () => {
 });
 
 // ========== SEARCH ==========
-document.querySelector('.film-search-input').addEventListener('input', function() {
+document.querySelector('.film-search-btn').addEventListener('click', function() {
     setTimeout(() => {
         const searchValue = this.value.toLowerCase();
 
@@ -200,6 +200,51 @@ document.querySelector('.film-search-input').addEventListener('input', function(
         document.querySelectorAll('.film-filter-btn').forEach((input) => input.value = '⚊');
     }, 500);
 });
+
+// ========== AUTO-COMPLETE SEARCH ==========
+const suggestions = films.map(film => film.title);
+
+const searchWrapper = document.querySelector(".search-input-wrapper");
+const inputBox = searchWrapper.querySelector(".film-search-input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+
+inputBox.onkeyup = (e) => {
+    let userData = e.target.value;
+    let emptyArray = [];
+    if (userData) {
+        emptyArray = suggestions.filter((data) => {
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+        });
+        emptyArray = emptyArray.map((data) => {
+            return data = '<li>'+ data +'</li>';
+        });
+        searchWrapper.classList.add("active");
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++){
+            allList[i].setAttribute("onclick", "select(this)");
+        }
+    } else {
+        searchWrapper.classList.remove("active");
+    }
+};
+
+function select(element) {
+    let selectUserData = element.textContent;
+    inputBox.value = selectUserData;
+    searchWrapper.classList.remove("active");
+}
+
+function showSuggestions(list) {
+    let listData;
+    if (!list.length) {
+        userValue = inputBox.value;
+        listData = '<li>'+ userValue +'</li>';
+    } else {
+        listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
+}
 
 // ========== FILM MODAL ==========
 function showData(film) {
