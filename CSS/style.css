@@ -920,6 +920,7 @@ section.active{
 }
 
 /* ========== RESPONSIVE ========== */
+/* Szűrő menü nagy ablakban bal oldalt, kicsiben fent */
 @media screen and (max-width: 320px){
     :root{
         --font-size-1: 28px;
