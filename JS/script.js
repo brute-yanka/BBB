@@ -1,12 +1,11 @@
 // ========== PAGE NAVIGATION ==========
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
-const pages = document.querySelectorAll('[data-page]');
 
 function activeLink() {
     navigationLinks.forEach((item) => {
         item.classList.remove('active');
         this.classList.add('active');
-        pages.forEach(page => {
+        document.querySelectorAll('[data-page]').forEach(page => {
             if (page.getAttribute('data-page') === this.getAttribute('data-nav-link')) page.classList.add('active');
             else page.classList.remove('active');
         });
@@ -14,26 +13,17 @@ function activeLink() {
     });
 };
 
-navigationLinks.forEach(n => n.addEventListener('click', activeLink));
+navigationLinks.forEach(link => link.addEventListener('click', activeLink));
 
 // ========== CLOCK ==========
-const deg = 6;
-const hr = document.querySelector('#hr');
-const mn = document.querySelector('#mn');
-const sc = document.querySelector('#sc');
-
 setInterval(() => {
     let day = new Date();
-    let hh = day.getHours() * 30;
-    let mm = day.getMinutes() * deg;
-    let ss = day.getSeconds() * deg;
-
-    hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
-    mn.style.transform = `rotateZ(${mm}deg)`;
-    sc.style.transform = `rotateZ(${ss}deg)`;
+    document.getElementById('hr').style.transform = `rotateZ(${(day.getHours() * 30) + (day.getMinutes() / 2)}deg)`;
+    document.getElementById('mn').style.transform = `rotateZ(${day.getMinutes() * 6}deg)`;
+    document.getElementById('sc').style.transform = `rotateZ(${day.getSeconds() * 6}deg)`;
 });
 
-// ========== TEAM ==========
+// ========== ELEMENT CREATOR FUNCTION ==========
 function createElementWithAttributes(tag, attributes, innerHTML) {
     const element = document.createElement(tag);
     for (const attribute in attributes) element.setAttribute(attribute, attributes[attribute]);
@@ -41,10 +31,11 @@ function createElementWithAttributes(tag, attributes, innerHTML) {
     return element;
 };
 
+// ========== TEAM ==========
 for (let i = 0; i < team.length;i++) {
     const card = createElementWithAttributes('div', { class: 'team-card' });
     const img = createElementWithAttributes('img', { class: 'team-img', src: `Images/Team/${team[i].picture}`, alt: `${team[i].alt}` });
-    const h3 = createElementWithAttributes('h3', { class: 'team-title modal-button' }, team[i].name);
+    const h3 = createElementWithAttributes('h3', { class: 'team-title team-modal-button' }, team[i].name);
     const icon = createElementWithAttributes('i', { class: 'ri-arrow-right-s-line' });
     const span = createElementWithAttributes('span', { class: 'team-subtitle' }, `${team[i].icon} ${team[i].role}`);
     document.querySelector('.team-container').append(card);
@@ -52,16 +43,16 @@ for (let i = 0; i < team.length;i++) {
     h3.append(icon);
 };
 
-document.querySelectorAll('.modal-button').forEach((modalBtn, i) => {
+document.querySelectorAll('.team-modal-button').forEach((modalBtn, i) => {
     modalBtn.addEventListener('click', () => {
-        document.querySelector('.modal-title').innerHTML = `${team[i].name} bemutatkozása!`;
-        document.querySelector('.modal-description').innerHTML = team[i].introduction;
-        document.querySelector('.modal').classList.add('active-modal');
+        document.querySelector('.team-modal-title').innerHTML = `${team[i].name} bemutatkozása!`;
+        document.querySelector('.team-modal-description').innerHTML = team[i].introduction;
+        document.querySelector('.team-modal').classList.add('active-modal');
     });
 });
 
-document.querySelector('.modal-close').addEventListener('click', () => {
-    document.querySelector('.modal').classList.remove('active-modal')
+document.querySelector('.team-modal-close').addEventListener('click', () => {
+    document.querySelector('.team-modal').classList.remove('active-modal')
 });
 
 // ========== LANGUAGES ==========
@@ -79,7 +70,7 @@ for (let i = 0; i < lang.length;i++) {
 // ========== SLIDER ==========
 
 
-// ========== FILM ==========
+// ========== COUNTER ==========
 counter.forEach((count) => {
     const box = createElementWithAttributes('div', { class: 'film-counter-box' });
     const span = createElementWithAttributes('span', {});
@@ -104,6 +95,7 @@ function startCounter() {
     });
 }
 
+// ========== TOP-RATED ==========
 films.sort((a, b) => b.rating - a.rating);
 const topRated = films.slice(0, 3);
 
@@ -127,6 +119,30 @@ for (let i = 0; i < topRated.length;i++) {
     duration.append(time);
 };
 
+// ========== FILM CARD CREATOR ==========
+function addFilms(filteredFilms) {
+    filteredFilms.forEach((film) => {
+        const card = createElementWithAttributes('li', { class: 'film-card' });
+        const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
+        const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
+        const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
+        const h3 = createElementWithAttributes('h3', { class: 'film-title', id: film.id }, `${film.title} <i class="ri-arrow-turn-forward-line"></i>`);
+        const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
+        const data = createElementWithAttributes('div', { class: 'film-card-data' });
+        const badge = createElementWithAttributes('div', { class: 'film-badge badge-outline' }, film.badge);
+        const duration = createElementWithAttributes('div', { class: 'film-duration' }, `<i class="ri-time-line"></i>`);
+        const time = createElementWithAttributes('time', {}, film.duration);
+        const rating = createElementWithAttributes('div', { class: 'film-rating' }, `<i class="ri-star-line"></i> ${film.rating}`);
+        filmContainer.append(card);
+        card.append(figure, wrapper, data);
+        figure.append(img);
+        wrapper.append(h3, date);
+        data.append(badge, duration, rating);
+        duration.append(time);
+    });
+}
+
+// ========== FILTER ==========
 categories.sort((a, b) => a.name.localeCompare(b.name));
 for (let i = 0; i < categories.length; i++) {
     const li = createElementWithAttributes('li', {});
@@ -153,28 +169,6 @@ document.querySelectorAll('.film-filter-btn').forEach((item) => {
 
 const filmContainer = document.getElementById('film-list');
 
-function addFilms(filteredFilms) {
-    filteredFilms.forEach((film) => {
-        const card = createElementWithAttributes('li', { class: 'film-card' });
-        const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
-        const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
-        const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
-        const h3 = createElementWithAttributes('h3', { class: 'film-title', id: film.id }, `${film.title} <i class="ri-arrow-turn-forward-line"></i>`);
-        const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
-        const data = createElementWithAttributes('div', { class: 'film-card-data' });
-        const badge = createElementWithAttributes('div', { class: 'film-badge badge-outline' }, film.badge);
-        const duration = createElementWithAttributes('div', { class: 'film-duration' }, `<i class="ri-time-line"></i>`);
-        const time = createElementWithAttributes('time', {}, film.duration);
-        const rating = createElementWithAttributes('div', { class: 'film-rating' }, `<i class="ri-star-line"></i> ${film.rating}`);
-        filmContainer.append(card);
-        card.append(figure, wrapper, data);
-        figure.append(img);
-        wrapper.append(h3, date);
-        data.append(badge, duration, rating);
-        duration.append(time);
-    });
-}
-
 document.querySelector('.film-search-btn').addEventListener('click', () => {
     const filteredFilms = films.filter(film => {
         return Array.from(document.querySelectorAll('.film-filter-btn')).some(input => {
@@ -184,10 +178,11 @@ document.querySelector('.film-search-btn').addEventListener('click', () => {
 
     filmContainer.innerHTML = '';
     if (filteredFilms.length === 0)
-        filmContainer.append(createElementWithAttributes('p', { class: 'film-not-found' }, `Sajnos az megadott kategóriákkal nem találtunk filmet! :(`));
+        filmContainer.append(createElementWithAttributes('p', { class: 'film-not-found' }, `Sajnos a megadott kategóriákkal nem találtunk filmet! :(`));
     else addFilms(filteredFilms);
 });
 
+// ========== SEARCH ==========
 document.querySelector('.film-search-input').addEventListener('input', function() {
     setTimeout(() => {
         const searchValue = this.value.toLowerCase();
@@ -206,6 +201,7 @@ document.querySelector('.film-search-input').addEventListener('input', function(
     }, 500);
 });
 
+// ========== FILM MODAL ==========
 function showData(film) {
     document.querySelector('.films-modal-title').innerHTML = film.title;
     document.querySelector('.films-modal-information .film-badge').innerHTML = film.badge;
@@ -225,11 +221,11 @@ document.querySelectorAll('.film-container').forEach((container) => {
         const clickedElement = event.target;
         if (clickedElement.classList.contains('film-title')) {
             showData(films.find(film => film.id === parseInt(clickedElement.getAttribute('id'))));
-            document.querySelector('.films-modal').classList.add('active-films-modal');
+            document.querySelector('.films-modal').classList.add('active-modal');
         }
     });
 });
 
 document.querySelector('.films-modal-close').addEventListener('click', () => {
-    document.querySelector('.films-modal').classList.remove('active-films-modal');
+    document.querySelector('.films-modal').classList.remove('active-modal');
 });

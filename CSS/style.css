@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
-
+/* ========== REUSABLE ========== */
 :root{
     --primary-color: #474448;
     --secondary-color: #706F6F;
@@ -212,7 +212,7 @@ li{
     transform: translateX(calc(70px * 2));
 }
 
-/* ========== TRANSITION ========== */
+/* ========== ACTIVE SECTION ========== */
 section{
     display: none;
 }
@@ -255,49 +255,6 @@ section.active{
     100%{
         background-position: 500%;
     }
-}
-
-/* ========== TEAM ========== */
-.team-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem 3rem;
-}
-
-.team-card{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-}
-
-.team-img{
-    position: relative;
-    align-self: center;
-    width: 120px;
-    border-radius: 1rem;
-    margin-bottom: 0.75rem;
-    transition: var(--transition-1);
-}
-
-.team-title{
-    color: var(--title-color);
-    font-size: var(--font-size-3);
-    font-weight: var(--font-weight-400);
-    margin-bottom: 0.25rem;
-}
-
-.team-subtitle{
-    color: var(--text-color);
-}
-
-.team-card:hover .team-img{
-    transform: translateY(-0.5rem);
-}
-
-.modal-button{
-    cursor: pointer;
 }
 
 /* ========== CLOCK ========== */
@@ -397,6 +354,49 @@ section.active{
     border-radius: 6px 6px 0 0;
 }
 
+/* ========== TEAM ========== */
+.team-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 3rem;
+}
+
+.team-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.team-img{
+    position: relative;
+    align-self: center;
+    width: 120px;
+    border-radius: 1rem;
+    margin-bottom: 0.75rem;
+    transition: var(--transition-1);
+}
+
+.team-title{
+    color: var(--title-color);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-400);
+    margin-bottom: 0.25rem;
+}
+
+.team-subtitle{
+    color: var(--text-color);
+}
+
+.team-card:hover .team-img{
+    transform: translateY(-0.5rem);
+}
+
+.team-modal-button{
+    cursor: pointer;
+}
+
 /* ========== LANGUAGES ========== */
 .lang-container{
     row-gap: 3.5rem;
@@ -445,7 +445,6 @@ section.active{
     color: var(--title-color);
 }
 
-/* Animation skills */
 .lang-blob:hover img{
     animation: bounce-skills 0.6s;
 }
@@ -471,8 +470,8 @@ section.active{
 /* ========== SLIDER ========== */
 
 
-/* ========== MODAL ========== */
-.modal{
+/* ========== TEAM MODAL ========== */
+.team-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -489,7 +488,7 @@ section.active{
     transition: var(--transition-1);
 }
 
-.modal-content{
+.team-modal-content{
     position: relative;
     background: var(--secondary-color);
     width: 320px;
@@ -497,19 +496,19 @@ section.active{
     border-radius: .5rem;
 }
 
-.modal-title{
+.team-modal-title{
     color: var(--white-color);
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-400);
     margin-bottom: 1.5rem;
 }
 
-.modal-description{
+.team-modal-description{
     font-size: var(--font-size-4);
     color: var(--title-color);
 }
 
-.modal-close{
+.team-modal-close{
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -518,13 +517,7 @@ section.active{
     cursor: pointer;
 }
 
-/* Active Modal */
-.active-modal{
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ========== FILM ========== */
+/* ========== FILM COUNTER ========== */
 .film-counter-container{
     display: flex;
     flex-wrap: wrap;
@@ -602,6 +595,7 @@ section.active{
     font-size: var(--font-size-4);
 }
 
+/* ========== FILM ========== */
 .film-wrapper{
     display: flex;
     flex-direction: column;
@@ -651,7 +645,7 @@ section.active{
     font-weight: var(--font-weight-400);
     font-size: var(--font-size-4);
     width: 70%;
-    min-width: 250px;
+    max-width: 400px;
     height: 2.5rem;
     margin-bottom: 2rem;
     border: 2px solid var(--secondary-color);
@@ -783,7 +777,7 @@ section.active{
     color: var(--title-color);
 }
 
-
+/* ========== FILM MODAL ========== */
 .films-modal{
     position: fixed;
     inset: 0;
@@ -844,12 +838,6 @@ section.active{
     border-radius: 0.5rem;
 }
 
-/*Active modal*/
-.active-films-modal{
-    opacity: 1;
-    visibility: visible;
-}
-
 .film-content{
     display: flex;
     flex-direction: column;
@@ -886,6 +874,10 @@ section.active{
     max-width: 250px;
 }
 
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
 
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 320px){
