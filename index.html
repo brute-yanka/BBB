@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang='hu'>
 <head>
+    <!--======== METADATA ========-->
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link href='https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css' rel='stylesheet'>
-    <link rel='stylesheet' href='CSS/style.css'>
+    <meta name="description" content="A csapat weboldal résznél bemutatjuk tagjainkat, felkészítő tanárunkat, iskolánkat és megosztunk néhány képet rólunk. A filmajánló biztosít filmkeresési lehetőségeket. Válaszd ki, hogy milyen kategóriák érdekelnek és találd meg a neked megfelelő filmeket. Ha már tudod mit szeretnél nézni, keress rá a keresővel.">
+    <meta name="keywords" content="csapat, bemutatkozás, tagok, iskola, képek, filmajánló, filmkeresés, kategória keresés">
+    <meta name="author" content="Nyíregyházi Kölcsey Ferenc Gimnázium 12.C Informatika Tagozat">
     <link rel='icon' type='image/x-icon' href='Images/Others/favicon.svg'>
-    <script src='JS/team.js'></script>
-    <script src="JS/lang.js"></script>
-    <script src="JS/categories.js"></script>
-    <script src='JS/films.js'></script>
-    <script src="JS/counter.js"></script>
-    <script defer src='JS/script.js'></script>
     <title>Bakonyi Bitfaragó Verseny 2023</title>
+    <!--======== CSS ========-->
+    <link rel="stylesheet" href="Fonts/remixicon.css">
+    <link rel='stylesheet' href='CSS/style.css'>
+    <!--======== SCRIPTS ========-->
+    <script defer src='JS/team.js'></script>
+    <script defer src="JS/lang.js"></script>
+    <script defer src="JS/categories.js"></script>
+    <script defer src='JS/films.js'></script>
+    <script defer src="JS/counter.js"></script>
+    <script defer src='JS/script.js'></script>
 </head>
 <body>
     <!--======== NAVIGATION ========-->
@@ -21,7 +27,7 @@
             <li data-nav-link='team'>
                 <div>
                     <span class='icon'>
-                        <i class='ri-team-line'></i>
+                        <i class="ri-group-line"></i>
                     </span>
                     <span class='text'>
                         Csapat
@@ -41,7 +47,7 @@
             <li data-nav-link='film'>
                 <div>
                     <span class='icon'>
-                        <i class='ri-film-line'></i>
+                        <i class="ri-movie-line"></i>
                     </span>
                     <span class='text'>
                         Filmajánló
@@ -73,7 +79,7 @@
                 </div>
             </div>
             <!--======== TEAM ========-->
-            <h2 class='section-title'>Csapatunk <i class='ri-team-line'></i></h2>
+            <h2 class='section-title'>Csapatunk <i class="ri-group-line"></i></h2>
             <article class='team-container container'></article>
             <hr class='horizontal-rule'>
             <!--======== LANGUAGES ========-->
