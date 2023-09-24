@@ -34,7 +34,7 @@ function createElementWithAttributes(tag, attributes, innerHTML) {
 // ========== TEAM ==========
 for (let i = 0; i < team.length;i++) {
     const card = createElementWithAttributes('div', { class: 'team-card' });
-    const img = createElementWithAttributes('img', { class: 'team-img', src: `Images/Team/${team[i].picture}`, alt: `${team[i].alt}` });
+    const img = createElementWithAttributes('img', { class: 'team-img', src: `Images/Team/${team[i].picture}`, alt: `${team[i].name} képe` });
     const h3 = createElementWithAttributes('h3', { class: 'team-title team-modal-button' }, team[i].name);
     const icon = createElementWithAttributes('i', { class: 'ri-arrow-right-s-line' });
     const span = createElementWithAttributes('span', { class: 'team-subtitle' }, `${team[i].icon} ${team[i].role}`);
@@ -68,7 +68,7 @@ for (let i = 0; i < lang.length;i++) {
 };
 
 // ========== SLIDER ==========
-// Képnézegető
+
 
 // ========== COUNTER ==========
 counter.forEach((count) => {
@@ -96,11 +96,11 @@ document.querySelectorAll('.film-counter-box h2').forEach((counter) => {
 // ========== FILM CARD CREATOR ==========
 function addFilms(filteredFilms, destination) {
     filteredFilms.forEach((film) => {
-        const card = createElementWithAttributes('li', { class: 'film-card' });
+        const card = createElementWithAttributes('li', { class: 'film-card', id: film.id });
         const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
         const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
         const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
-        const title = createElementWithAttributes('a', { class: 'film-title', id: film.id, title: film.title }, film.title);
+        const title = createElementWithAttributes('a', { class: 'film-title', title: film.title }, film.title);
         const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
         const data = createElementWithAttributes('div', { class: 'film-card-data' });
         const badge = createElementWithAttributes('div', { class: 'film-badge badge-outline' }, film.badge);
@@ -181,7 +181,7 @@ inputBox.onkeyup = (e) => {
         searchWrapper.classList.add("active");
         showSuggestions(
             suggestions.filter((data) => {
-                return data.toLocaleLowerCase().startsWith(e.target.value.toLocaleLowerCase());
+                return data.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase());
             }).map((data) => {
                 return data = `<li>${data}</li>`;
             })
@@ -226,9 +226,9 @@ function showData(film) {
 
 document.querySelectorAll('.film-container').forEach((container) => {
     container.addEventListener('click', (event) => {
-        const clickedElement = event.target;
-        if (clickedElement.classList.contains('film-title')) { //POPUP A TELJES KARTYARA
-            showData(films.find(film => film.id === parseInt(clickedElement.getAttribute('id'))));
+        const clickedElement = event.target.closest('.film-card');
+        if (clickedElement) {
+            showData(films.find(film => film.id === parseInt(clickedElement.id)));
             document.querySelector('.films-modal').classList.add('active-modal');
         }
     });
