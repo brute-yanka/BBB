@@ -68,6 +68,10 @@ document.querySelector('.team-modal-close').addEventListener('click', () => {
     document.querySelector('.team-modal').classList.remove('active-modal')
 });
 
+window.addEventListener('click', (event) => {
+    if(event.target.classList.contains('team-modal')) document.querySelector('.team-modal').classList.remove('active-modal');
+});
+
 // ========== LANGUAGES ==========
 for (let i = 0; i < lang.length;i++) {
     const card = createElementWithAttributes('div', { class: 'lang-data' });
@@ -344,4 +348,8 @@ document.querySelectorAll('.film-container').forEach((container) => {
 
 document.querySelector('.films-modal-close').addEventListener('click', () => {
     document.querySelector('.films-modal').classList.remove('active-modal');
+});
+
+window.addEventListener('click', (event) => {
+    if(event.target.classList.contains('films-modal')) document.querySelector('.films-modal').classList.remove('active-modal');
 });
