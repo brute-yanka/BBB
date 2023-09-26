@@ -4,14 +4,14 @@ let team = [
         name: 'Veres Zsolt',
         icon: '<i class="ri-braces-line"></i>',
         role: 'Web Fejlesztés',
-        introduction: 'Elso'
+        introduction: '17 éves vagyok és a Nyíregyházi Kölcsey Ferenc Gimnáziumban tanulok. Szenvedélyem a programozás, különösen C++-ban, de jártas vagyok MySQL, HTML, CSS, és JavaScript területein is. Imádom a kihívásokat, és minél nagyobb feladat elé állíthatom magam, annál nagyobb késztetést érzek annak véghezvitelére. Ebből fakadóan lelkesen veszek részt különböző versenyeken és megmérettetéseken. Szabadidőmben pedig a biciklizés és az online játékok kiválóan kiegészítik a kompetitív hajlamaimat.'
     },
     {
-        picture: 'profile.png',
+        picture: 'bokor.jpg',
         name: 'Bokor Balázs',
         icon: '<i class="ri-drop-line"></i>',
         role: 'Web Dizájn',
-        introduction: 'Masodik'
+        introduction: '18 éves vagyok, jelenleg a Nyíregyházi Kölcsey Ferenc Gimnázium tanulója. Informatika/számítógépek iránti szeretetem általános iskolás koromból eredeteztethető, de a számok világában is jártasnak vallom magam. Éppen ezért szertnék az informatika gazdasági felhasználásával foglalkozni, gazdaságiinformatikusként végezni. Programozási képességeim tökéletesítésén még dolgoznom kell, de hiszem, hogy egy nap én is leszek olyan jó, mint csapattársaim, felkészítő tanárom.'
     },
     {
         picture: 'peter.jpg',
