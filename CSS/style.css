@@ -1132,11 +1132,6 @@ section.active{
 }
 
 @media screen and (min-width: 1024px){
-    .clock-container{
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-    }
     .lang-container{
         column-gap: 10rem;
     }
@@ -1145,5 +1140,13 @@ section.active{
     }
     .gallery-slider{
         max-width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    .clock-container{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }
