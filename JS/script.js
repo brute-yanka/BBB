@@ -34,8 +34,8 @@ function createElementWithAttributes(tag, attributes, innerHTML) {
 // ========== TEAM ==========
 for (let i = 0; i < team.length;i++) {
     const card = createElementWithAttributes('div', { class: 'team-card' });
-    const img = createElementWithAttributes('img', { class: 'team-img', src: `Images/Team/${team[i].picture}`, alt: `${team[i].name} képe` });
-    const h3 = createElementWithAttributes('h3', { class: 'team-title team-modal-button' }, team[i].name);
+    const img = createElementWithAttributes('img', { class: 'team-img', src: `Images/Team/${team[i].picture}`, alt: `${team[i].name} képe`, title: `${team[i].name} képe` });
+    const h3 = createElementWithAttributes('h3', { class: 'team-title' }, team[i].name);
     const icon = createElementWithAttributes('i', { class: 'ri-arrow-right-s-line' });
     const span = createElementWithAttributes('span', { class: 'team-subtitle' }, `${team[i].icon} ${team[i].role}`);
     document.querySelector('.team-container').append(card);
@@ -43,11 +43,24 @@ for (let i = 0; i < team.length;i++) {
     h3.append(icon);
 };
 
-document.querySelectorAll('.team-modal-button').forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        document.querySelector('.team-modal-title').innerHTML = `${team[i].name} bemutatkozása!`;
-        document.querySelector('.team-modal-description').innerHTML = team[i].introduction;
-        document.querySelector('.team-modal').classList.add('active-modal');
+document.querySelectorAll('.film-container').forEach((container) => {
+    container.addEventListener('click', (event) => {
+        const clickedElement = event.target.closest('.film-card');
+        if (clickedElement) {
+            showData(films.find(film => film.id === parseInt(clickedElement.id)));
+            document.querySelector('.films-modal').classList.add('active-modal');
+        }
+    });
+});
+
+document.querySelectorAll('.team-card').forEach((container, i) => {
+    container.addEventListener('click', (event) => {
+        const clickedElement = event.target.closest('.team-card');
+        if (clickedElement) {
+            document.querySelector('.team-modal-title').innerHTML = `${team[i].name} bemutatkozása!`;
+            document.querySelector('.team-modal-description').innerHTML = team[i].introduction;
+            document.querySelector('.team-modal').classList.add('active-modal');
+        }
     });
 });
 
@@ -59,7 +72,7 @@ document.querySelector('.team-modal-close').addEventListener('click', () => {
 for (let i = 0; i < lang.length;i++) {
     const card = createElementWithAttributes('div', { class: 'lang-data' });
     const blob = createElementWithAttributes('div', { class: 'lang-blob' });
-    const img = createElementWithAttributes('img', { src: `Images/Languages/${lang[i].picture}`, alt: `${lang[i].alt}` });
+    const img = createElementWithAttributes('img', { src: `Images/Languages/${lang[i].picture}`, alt: lang[i].alt, title: lang[i].alt });
     const h3 = createElementWithAttributes('h3', { class: 'lang-name' }, lang[i].name);
     const span = createElementWithAttributes('span', { class: 'lang-subtitle' }, lang[i].level );
     document.querySelector('.lang-info').append(card);
@@ -67,9 +80,104 @@ for (let i = 0; i < lang.length;i++) {
     blob.append(img);
 };
 
-// ========== SLIDER ==========
+// ========== GALLERY ==========
+const container = document.querySelector('.gallery-slider');
+const icons = [];
+for (let i = 0; i <= 10; i++){
+    const img = createElementWithAttributes('img', { src: `Images/Gallery/${i}.jpg`, class: 'gallery-slide', alt: `Képnézegető ${i}. képe`, title: `Képnézegető ${i}. képe`, 'data-source': 'A kép a Wallpaper Flare hivatalos oldaláról származik.' });
+    container.append(img);
+    icons.push(createElementWithAttributes('div', { class: 'gallery-slide-icon' }));
+}
 
+container.append(createElementWithAttributes('div', { class: 'gallery-slider-navigation' }), createElementWithAttributes('div', { class: 'gallery-slider-navigation-visibility' }), createElementWithAttributes('i', { class: 'ri-fullscreen-line gallery-fullscreen' }));
+document.querySelector('.gallery-slider-navigation').append(createElementWithAttributes('i', { class: 'ri-arrow-left-s-line gallery-prev-btn' }), createElementWithAttributes('i', { class: 'ri-arrow-right-s-line gallery-next-btn' }));
 
+icons.forEach((icon) => document.querySelector('.gallery-slider-navigation-visibility').append(icon));
+
+const slides = document.querySelectorAll('.gallery-slide');
+slides.item(0).classList.add('active');
+const slideIcons = document.querySelectorAll('.gallery-slide-icon');
+slideIcons.item(0).classList.add('active');
+
+const maxSlides = slides.length;
+let slideNumber = 0, playSlider;
+
+document.querySelector('.gallery-fullscreen').addEventListener('click', () => document.querySelector('.gallery-container').classList.add('active'));
+document.querySelector('.gallery-fullscreen-exit').addEventListener('click', () => {
+    document.querySelector('.gallery-container').classList.remove('active');
+    scrollTo(0, document.body.scrollHeight);
+});
+
+document.querySelector('.gallery-next-btn').addEventListener('click', () => {
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+    slideIcons.forEach((icon) => {
+        icon.classList.remove('active');
+    });
+
+    slideNumber++;
+    if (slideNumber > (maxSlides - 1)) slideNumber = 0;
+
+    slides[slideNumber].classList.add('active');
+    slideIcons[slideNumber].classList.add('active');
+});
+
+document.querySelector('.gallery-prev-btn').addEventListener('click', () => {
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+    slideIcons.forEach((icon) => {
+        icon.classList.remove('active');
+    });
+
+    slideNumber--;
+    if (slideNumber < 0) slideNumber = maxSlides - 1;
+
+    slides[slideNumber].classList.add('active');
+    slideIcons[slideNumber].classList.add('active');
+});
+
+slideIcons.forEach((icon, i) => {
+    icon.addEventListener('click', () => {
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        });
+        slideIcons.forEach((icon) => {
+            icon.classList.remove('active');
+        });
+
+        slideNumber = i;
+        slides[slideNumber].classList.add('active');
+        slideIcons[slideNumber].classList.add('active');
+    });
+});
+
+repeater = () => {
+    playSlider = setInterval(function () {
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        });
+        slideIcons.forEach((icon) => {
+            icon.classList.remove('active');
+        });
+
+        slideNumber++;
+        if (slideNumber > (maxSlides - 1)) slideNumber = 0;
+
+        slides[slideNumber].classList.add('active');
+        slideIcons[slideNumber].classList.add('active');
+    }, 5000);
+};
+
+document.querySelector('.gallery-starter').addEventListener('click', function() {
+    this.remove();
+    container.classList.add('started');
+    scrollTo(0, document.body.scrollHeight);
+    repeater();
+});
+document.querySelector('.gallery-slider').addEventListener('mouseover', () => clearInterval(playSlider));
+document.querySelector('.gallery-slider').addEventListener('mouseout', () => repeater());
 // ========== COUNTER ==========
 counter.forEach((count) => {
     const box = createElementWithAttributes('div', { class: 'film-counter-box' });
@@ -98,7 +206,7 @@ function addFilms(filteredFilms, destination) {
     filteredFilms.forEach((film) => {
         const card = createElementWithAttributes('li', { class: 'film-card', id: film.id });
         const figure = createElementWithAttributes('figure', { class: 'film-card-banner' });
-        const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
+        const img = createElementWithAttributes('img', { src: `Images/Movie/${film.picture}`, alt: `${film.title} képe`, title: `${film.title} képe`, 'data-source': 'A kép az IMDB hivatalos oldaláról származik.' });
         const wrapper = createElementWithAttributes('div', { class: 'film-title-wrapper' });
         const title = createElementWithAttributes('a', { class: 'film-title', title: film.title }, film.title);
         const date = createElementWithAttributes('time', { dateTime: `${film.year}` }, film.year);
